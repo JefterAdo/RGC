@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 
 // Get thematique_insight terms for filter
@@ -91,7 +95,7 @@ $thematiques = get_terms( array(
                                 <span>&bull;</span>
                                 <span><?php echo esc_html( $read_time ); ?> min</span>
                             </div>
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors"><?php the_title(); ?></h3>
+                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors"><?php echo esc_html( get_the_title() ); ?></h3>
                             <p class="text-gray-500 text-sm leading-relaxed flex-1"><?php echo esc_html( rcg_truncate( get_the_excerpt(), 120 ) ); ?></p>
                         </div>
                     </a>

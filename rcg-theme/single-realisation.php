@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 
 while ( have_posts() ) :
@@ -45,7 +49,7 @@ while ( have_posts() ) :
                 <?php endif; ?>
             </div>
             <h1 class="text-4xl lg:text-5xl font-black leading-tight uppercase">
-                <?php the_title(); ?>
+                <?php echo esc_html( get_the_title() ); ?>
             </h1>
             <?php if ( $short ) : ?>
                 <p class="text-white/60 text-lg font-light leading-relaxed mt-8">

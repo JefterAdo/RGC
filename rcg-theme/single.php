@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 
 while ( have_posts() ) :
@@ -44,7 +48,7 @@ while ( have_posts() ) :
             <span><?php echo esc_html( $read_time ); ?> min</span>
         </div>
         <h1 class="text-4xl lg:text-5xl font-black leading-tight uppercase">
-            <?php the_title(); ?>
+            <?php echo esc_html( get_the_title() ); ?>
         </h1>
         <?php if ( has_excerpt() ) : ?>
             <p class="text-white/60 text-lg font-light leading-relaxed mt-8 max-w-2xl">
@@ -85,7 +89,7 @@ while ( have_posts() ) :
                         <div class="text-white/40 text-sm"><span class="material-symbols-outlined text-primary text-base align-middle mr-1">description</span> <?php echo esc_html( $report_pages ); ?></div>
                     <?php endif; ?>
                     <?php if ( $report_file ) : ?>
-                        <a href="<?php echo esc_url( $report_file ); ?>" target="_blank" class="bg-primary text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-red-700 transition-colors">
+                        <a href="<?php echo esc_url( $report_file ); ?>" target="_blank" rel="noopener noreferrer" class="bg-primary text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-red-700 transition-colors">
                             Télécharger le PDF
                         </a>
                     <?php endif; ?>

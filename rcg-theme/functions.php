@@ -47,6 +47,19 @@ if ( ! function_exists( 'the_sub_field' ) ) {
 }
 
 /**
+ * Security Headers
+ */
+function rcg_security_headers() {
+    if ( ! is_admin() ) {
+        header( 'X-Content-Type-Options: nosniff' );
+        header( 'X-Frame-Options: SAMEORIGIN' );
+        header( 'Referrer-Policy: strict-origin-when-cross-origin' );
+        header( 'Permissions-Policy: camera=(), microphone=(), geolocation=()' );
+    }
+}
+add_action( 'send_headers', 'rcg_security_headers' );
+
+/**
  * Theme Setup
  */
 function rcg_theme_setup() {
@@ -118,7 +131,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
         'page_title' => __( 'Options RCG', 'rcg' ),
         'menu_title' => __( 'Options RCG', 'rcg' ),
         'menu_slug'  => 'rcg-options',
-        'capability' => 'edit_posts',
+        'capability' => 'manage_options',
         'redirect'   => false,
         'icon_url'   => 'dashicons-admin-site-alt3',
         'position'   => 2,
@@ -161,8 +174,14 @@ function rcg_handle_contact_form() {
         wp_die( esc_html__( 'Verification de securite echouee.', 'rcg' ), '', array( 'back_link' => true ) );
     }
 
-    $name    = isset( $_POST['rcg_name'] ) ? sanitize_text_field( wp_unslash( $_POST['rcg_name'] ) ) : '';
+    $name    = isset( $_POST['rcg_name'] ) ? str_replace( array( "\r", "\n" ), '', sanitize_text_field( wp_unslash( $_POST['rcg_name'] ) ) ) : '';
     $email   = isset( $_POST['rcg_email'] ) ? sanitize_email( wp_unslash( $_POST['rcg_email'] ) ) : '';
+
+    // Valider le format email
+    if ( ! is_email( $email ) ) {
+        wp_safe_redirect( add_query_arg( 'contact', 'error', wp_get_referer() ) );
+        exit;
+    }
     $phone   = isset( $_POST['rcg_tel'] ) ? sanitize_text_field( wp_unslash( $_POST['rcg_tel'] ) ) : '';
     $org     = isset( $_POST['rcg_org'] ) ? sanitize_text_field( wp_unslash( $_POST['rcg_org'] ) ) : '';
     $service = isset( $_POST['rcg_besoin'] ) ? sanitize_text_field( wp_unslash( $_POST['rcg_besoin'] ) ) : '';

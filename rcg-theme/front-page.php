@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 
 // Section Hero

@@ -229,7 +229,7 @@ $has_featured = $featured_query->have_posts();
                             </div>
                         <?php endif; ?>
 
-                        <h3 class="text-2xl lg:text-3xl font-black uppercase tracking-tight leading-tight"><?php the_title(); ?></h3>
+                        <h3 class="text-2xl lg:text-3xl font-black uppercase tracking-tight leading-tight"><?php echo esc_html( get_the_title() ); ?></h3>
 
                         <?php if ( $f_desc ) : ?>
                             <p class="text-white/60 mt-4 text-sm leading-relaxed"><?php echo esc_html( $f_desc ); ?></p>
@@ -348,7 +348,7 @@ $has_featured = $featured_query->have_posts();
                     </div>
                     <!-- Contenu -->
                     <div class="p-8 flex flex-col flex-1">
-                        <h3 class="font-bold text-lg uppercase tracking-tight leading-tight"><?php the_title(); ?></h3>
+                        <h3 class="font-bold text-lg uppercase tracking-tight leading-tight"><?php echo esc_html( get_the_title() ); ?></h3>
                         <?php if ( $r_client ) : ?>
                             <span class="text-[10px] uppercase tracking-widest text-gray-400 mt-2 block"><?php echo esc_html( $r_client ); ?></span>
                         <?php endif; ?>

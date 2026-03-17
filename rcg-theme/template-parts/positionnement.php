@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $label = rcg_get_field( 'pos_label', false, 'Notre Positionnement' );
 $title = rcg_get_field( 'pos_title', false, 'Acteur majeur de la communication institutionnelle' );
 ?>

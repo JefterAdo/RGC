@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 ?>
 
@@ -26,7 +30,7 @@ get_header();
                             </div>
                         <?php endif; ?>
                         <div class="p-8 space-y-4">
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors"><?php the_title(); ?></h3>
+                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors"><?php echo esc_html( get_the_title() ); ?></h3>
                             <p class="text-gray-500 text-sm leading-relaxed"><?php echo esc_html( rcg_truncate( get_the_excerpt(), 120 ) ); ?></p>
                         </div>
                     </a>

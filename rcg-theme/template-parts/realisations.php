@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $realisations_query = new WP_Query( array(
     'post_type'      => 'realisation',
     'posts_per_page' => 3,

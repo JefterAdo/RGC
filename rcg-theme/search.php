@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 ?>
 
@@ -41,7 +45,7 @@ get_header();
                         <?php endif; ?>
                         <div class="flex-1">
                             <span class="text-[10px] uppercase tracking-widest text-gray-400"><?php echo esc_html( get_post_type_object( get_post_type() )->labels->singular_name ); ?></span>
-                            <h3 class="text-xl font-bold mt-1 group-hover:text-primary transition-colors"><?php the_title(); ?></h3>
+                            <h3 class="text-xl font-bold mt-1 group-hover:text-primary transition-colors"><?php echo esc_html( get_the_title() ); ?></h3>
                             <p class="text-gray-500 text-sm leading-relaxed mt-2"><?php echo esc_html( rcg_truncate( get_the_excerpt(), 200 ) ); ?></p>
                         </div>
                     </a>

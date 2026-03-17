@@ -261,7 +261,7 @@ $bg_map = array(
                                 <span class="read-time"><?php echo esc_html( $read_time ); ?> min</span>
                             </div>
                             <h3 class="font-bold text-lg uppercase tracking-tight leading-tight mb-3">
-                                <a href="<?php the_permalink(); ?>" class="hover:text-primary transition-colors"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="hover:text-primary transition-colors"><?php echo esc_html( get_the_title() ); ?></a>
                             </h3>
                             <p class="text-sm <?php echo $is_dark ? 'text-white/50' : 'text-gray-500'; ?> leading-relaxed mb-6"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 25 ) ); ?></p>
                             <div class="flex items-center justify-between mt-auto">
@@ -289,7 +289,7 @@ $bg_map = array(
                             <div class="relative">
                                 <span class="font-serif text-7xl text-primary/10 absolute -top-2 -left-2">"</span>
                                 <h3 class="font-bold text-lg uppercase tracking-tight leading-tight pt-8 mb-4">
-                                    <a href="<?php the_permalink(); ?>" class="hover:text-primary transition-colors"><?php the_title(); ?></a>
+                                    <a href="<?php the_permalink(); ?>" class="hover:text-primary transition-colors"><?php echo esc_html( get_the_title() ); ?></a>
                                 </h3>
                             </div>
                             <p class="text-sm text-gray-500 leading-relaxed"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 30 ) ); ?></p>
@@ -329,7 +329,7 @@ $bg_map = array(
                                 <span class="text-[10px] uppercase tracking-widest text-white/40"><?php echo esc_html( $stat_label ); ?></span>
                             <?php endif; ?>
                             <h3 class="font-bold text-lg uppercase tracking-tight leading-tight mt-6 mb-3">
-                                <a href="<?php the_permalink(); ?>" class="hover:text-primary transition-colors"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="hover:text-primary transition-colors"><?php echo esc_html( get_the_title() ); ?></a>
                             </h3>
                             <p class="text-sm text-white/50 leading-relaxed"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 25 ) ); ?></p>
                         </div>
@@ -540,7 +540,9 @@ $bg_map = array(
             <!-- Formulaire -->
             <div class="bg-surface-mid p-10">
                 <h3 class="font-bold text-lg uppercase tracking-tight mb-6"><?php esc_html_e( 'S\'abonner à la lettre', 'rcg' ); ?></h3>
-                <form class="space-y-4" method="post" action="#">
+                <form class="space-y-4" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+                    <?php wp_nonce_field( 'rcg_newsletter', 'rcg_newsletter_nonce' ); ?>
+                    <input type="hidden" name="action" value="rcg_newsletter_subscribe">
                     <div>
                         <label class="text-[9px] uppercase tracking-widest text-white/40 font-semibold block mb-2"><?php esc_html_e( 'Nom & Prénom', 'rcg' ); ?></label>
                         <input type="text" name="nl_name" class="w-full bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder-white/30 focus:border-primary focus:outline-none transition-colors" placeholder="Votre nom complet">

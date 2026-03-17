@@ -14,6 +14,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 
 // Verifier si on a des expertises dynamiques
@@ -211,7 +215,7 @@ if ( ! $reals_url ) $reals_url = '#';
                         if ( ! $anchor ) $anchor = sanitize_title( get_the_title() );
                 ?>
                     <a href="#<?php echo esc_attr( $anchor ); ?>" class="tag-pill text-white/50 border-white/20 hover:text-primary hover:border-primary transition-colors">
-                        <?php echo esc_html( $number ); ?> &mdash; <?php the_title(); ?>
+                        <?php echo esc_html( $number ); ?> &mdash; <?php echo esc_html( get_the_title() ); ?>
                     </a>
                 <?php
                     endwhile;

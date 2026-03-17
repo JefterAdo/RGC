@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // Query les CPT Expertise
 $expertises_query = new WP_Query( array(
     'post_type'      => 'expertise',
@@ -38,7 +42,7 @@ $expertises_query = new WP_Query( array(
                     ?>
                     <a href="<?php echo esc_url( $link ); ?>" class="group bg-white p-10 flex flex-col space-y-6 transition-all border-b-0 hover:border-b-[3px] border-primary">
                         <span class="text-primary font-bold text-lg"><?php echo esc_html( $number ); ?></span>
-                        <h3 class="text-2xl font-bold uppercase tracking-tight"><?php the_title(); ?></h3>
+                        <h3 class="text-2xl font-bold uppercase tracking-tight"><?php echo esc_html( get_the_title() ); ?></h3>
                         <p class="text-gray-500 text-sm leading-relaxed"><?php echo esc_html( get_the_excerpt() ); ?></p>
                     </a>
                     <?php

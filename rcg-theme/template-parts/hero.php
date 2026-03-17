@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $label       = rcg_get_field( 'hero_label', false, 'Communication Strategique' );
 $title       = rcg_get_field( 'hero_title', false, "L'intelligence au service de votre communication" );
 $description = rcg_get_field( 'hero_description', false, "Accompagner les decideurs, les institutions et les organisations dans leurs enjeux de reputation, d'influence et de visibilite en Afrique de l'Ouest." );

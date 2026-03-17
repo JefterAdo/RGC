@@ -5,6 +5,10 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $label = rcg_get_field( 'why_label', false, 'Pourquoi RCG ?' );
 $title = rcg_get_field( 'why_title', false, "L'excellence operationnelle au coeur de notre demarche" );
 

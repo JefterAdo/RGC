@@ -410,7 +410,7 @@ $anchors = array(
                         <div class="flex items-center gap-3 mb-4">
                             <div class="relative w-3 h-3">
                                 <div class="w-3 h-3 rounded-full <?php echo esc_attr( $dot_bg ); ?>"></div>
-                                <div class="dot-ping <?php echo esc_attr( $dot_bg ); ?>"<?php echo $dot_delay; ?>></div>
+                                <div class="dot-ping <?php echo esc_attr( $dot_bg ); ?>"<?php if ( $i > 0 ) : ?> style="animation-delay:1s"<?php endif; ?>></div>
                             </div>
                             <h3 class="font-bold text-lg uppercase tracking-tight"><?php echo esc_html( $bureau['city'] ); ?></h3>
                         </div>

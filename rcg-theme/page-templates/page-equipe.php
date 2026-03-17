@@ -183,7 +183,7 @@ $has_direction   = $direction_query->have_posts();
                             <span class="text-primary font-bold text-[9px] tracking-[3px] uppercase mb-8 block"><?php echo esc_html( $poste ); ?></span>
                         <?php endif; ?>
                         <h2 class="font-black text-4xl lg:text-5xl uppercase leading-[1.1] mb-6 tracking-tight">
-                            <?php the_title(); ?>
+                            <?php echo esc_html( get_the_title() ); ?>
                         </h2>
                         <div class="line-accent mb-8"></div>
                         <?php if ( $bio ) : ?>
@@ -200,7 +200,7 @@ $has_direction   = $direction_query->have_posts();
                         <?php endif; ?>
                         <div class="flex items-center gap-6 pt-6 border-t border-white/10">
                             <?php if ( $linkedin ) : ?>
-                                <a href="<?php echo esc_url( $linkedin ); ?>" target="_blank" rel="noopener" class="text-white/40 hover:text-white transition-colors flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest">
+                                <a href="<?php echo esc_url( $linkedin ); ?>" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-white transition-colors flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                                     LinkedIn
                                 </a>
@@ -327,7 +327,7 @@ $fallback_seniors = array(
                             <?php if ( $poste ) : ?>
                                 <span class="text-primary font-bold text-[9px] tracking-[2.5px] uppercase mb-3"><?php echo esc_html( $poste ); ?></span>
                             <?php endif; ?>
-                            <h3 class="font-black text-2xl text-white uppercase leading-tight mb-1"><?php the_title(); ?></h3>
+                            <h3 class="font-black text-2xl text-white uppercase leading-tight mb-1"><?php echo esc_html( get_the_title() ); ?></h3>
                             <?php if ( $bio_court ) : ?>
                                 <p class="text-white/50 text-sm mb-4"><?php echo esc_html( $bio_court ); ?></p>
                             <?php endif; ?>
@@ -340,7 +340,7 @@ $fallback_seniors = array(
                                     </div>
                                 <?php endif; ?>
                                 <?php if ( $linkedin ) : ?>
-                                    <a href="<?php echo esc_url( $linkedin ); ?>" target="_blank" rel="noopener" class="ml-auto text-white/40 hover:text-white transition-colors">
+                                    <a href="<?php echo esc_url( $linkedin ); ?>" target="_blank" rel="noopener noreferrer" class="ml-auto text-white/40 hover:text-white transition-colors">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                                     </a>
                                 <?php endif; ?>

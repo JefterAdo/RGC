@@ -72,12 +72,13 @@ $map_embed = get_field( 'ct_map_embed' );
                 <!-- Formulaire statique (fallback) -->
                 <?php
                 // Message de confirmation
-                if ( isset( $_GET['contact'] ) ) :
-                    if ( 'success' === $_GET['contact'] ) : ?>
+                $contact_status = isset( $_GET['contact'] ) ? sanitize_key( wp_unslash( $_GET['contact'] ) ) : '';
+                if ( $contact_status ) :
+                    if ( 'success' === $contact_status ) : ?>
                         <div class="bg-green-50 border border-green-200 text-green-800 p-4 mb-6 text-sm">
                             <?php esc_html_e( 'Votre message a bien ete envoye. Nous vous recontacterons rapidement.', 'rcg' ); ?>
                         </div>
-                    <?php elseif ( 'error' === $_GET['contact'] ) : ?>
+                    <?php elseif ( 'error' === $contact_status ) : ?>
                         <div class="bg-red-50 border border-red-200 text-red-800 p-4 mb-6 text-sm">
                             <?php esc_html_e( 'Veuillez remplir tous les champs obligatoires.', 'rcg' ); ?>
                         </div>

@@ -5,13 +5,17 @@
  * @package RCG
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 ?>
 
 <section class="bg-background-dark py-24 text-white">
     <div class="container mx-auto px-6 lg:px-12">
         <h1 class="text-5xl lg:text-[76px] font-black leading-[1.05] uppercase">
-            <?php the_title(); ?>
+            <?php echo esc_html( get_the_title() ); ?>
         </h1>
     </div>
 </section>
