@@ -34,59 +34,59 @@ $static_expertises = array(
     array(
         'number'   => '01',
         'anchor'   => 'strategie',
-        'eyebrow'  => 'Expertise Strategique',
-        'title'    => 'Strategie de Communication Institutionnelle',
-        'desc'     => 'Conseil strategique de haut niveau pour definir, structurer et deployer des programmes de communication a fort impact. De l\'audit de positionnement au plan global, nous tracons la voie.',
+        'eyebrow'  => 'Conseil Strategique',
+        'title'    => 'Conseil Strategique & Communication Institutionnelle',
+        'desc'     => 'Au coeur de l\'offre RCG West Africa : le conseil strategique de haut niveau pour institutions, gouvernements et organisations en Afrique de l\'Ouest. Audit de positionnement, architecture de la communication et pilotage operationnel.',
         'bg'       => 'white',
         'layout'   => 'text-left',
         'list'     => 'steps',
         'items'    => array(
-            array( 'icon' => '01', 'title' => 'Audit & Diagnostic', 'desc' => 'Cartographie complete de votre positionnement et des risques reputationnels.' ),
-            array( 'icon' => '02', 'title' => 'Architecture Strategique', 'desc' => 'Conception de la plateforme de marque et de la feuille de route communication.' ),
-            array( 'icon' => '03', 'title' => 'Pilotage & Mesure', 'desc' => 'KPIs definis, tableaux de bord et reporting a 360 pour chaque etape.' ),
+            array( 'icon' => '01', 'title' => 'Audit & Diagnostic Institutionnel', 'desc' => 'Cartographie de votre environnement communicationnel, analyse des risques reputationnels et identification des leviers d\'influence.' ),
+            array( 'icon' => '02', 'title' => 'Strategie & Feuille de Route', 'desc' => 'Conception de la plateforme de marque institutionnelle, plan de communication global et strategie de positionnement.' ),
+            array( 'icon' => '03', 'title' => 'Pilotage & Indicateurs de Performance', 'desc' => 'KPIs, tableaux de bord et reporting a 360. Chaque action est mesuree et optimisee en continu.' ),
         ),
-        'quote'    => 'Une strategie institutionnelle puissante ne se contente pas d\'informer, elle oriente l\'opinion et asseoit la legitimite du decideur.',
+        'quote'    => 'Le conseil strategique est le fondement de toute communication institutionnelle reussie. — Ibrahim KOUROUMA, Fondateur RCG',
         'stats'    => array(),
         'image'    => RCG_URI . '/assets/images/exp-strategie.png',
     ),
     array(
         'number'   => '02',
-        'anchor'   => 'image',
-        'eyebrow'  => 'Gestion d\'Image',
-        'title'    => 'Image & Reputation des Dirigeants',
-        'desc'     => 'Personal branding des decideurs et gestion de la reputation institutionnelle a long terme. Nous construisons des images de leaders qui resistent aux crises et imposent le respect.',
+        'anchor'   => 'relations-publiques',
+        'eyebrow'  => 'Relations Publiques & Image',
+        'title'    => 'Relations Publiques & Gestion de Reputation',
+        'desc'     => 'Construction et protection de l\'image des decideurs et institutions. Personal branding, veille reputationnelle et strategie d\'influence pour les leaders d\'Afrique de l\'Ouest — de la CEDEAO aux entreprises du secteur prive.',
         'bg'       => 'gray',
         'layout'   => 'text-right',
         'list'     => 'arrows',
         'items'    => array(
-            array( 'desc' => 'Veille strategique et mediatique 360 en temps reel' ),
-            array( 'desc' => 'Coaching communication et media training dirigeants' ),
+            array( 'desc' => 'Veille strategique et mediatique en temps reel sur l\'Afrique de l\'Ouest' ),
+            array( 'desc' => 'Coaching communication et media training pour dirigeants et porte-paroles' ),
             array( 'desc' => 'Strategie de presence digitale et influence institutionnelle' ),
-            array( 'desc' => 'Monitoring des vulnerabilites et gestion proactive des risques' ),
+            array( 'desc' => 'Monitoring des risques reputationnels et gestion proactive de l\'image' ),
         ),
         'quote'    => '',
         'stats'    => array(
-            array( 'value' => '50+', 'label' => 'Dirigeants accompagnes' ),
-            array( 'value' => '15', 'label' => 'Pays couverts' ),
-            array( 'value' => '24h', 'label' => 'Veille permanente' ),
+            array( 'value' => '50+', 'label' => 'Clients accompagnes' ),
+            array( 'value' => '10+', 'label' => 'Pays couverts' ),
+            array( 'value' => '24/7', 'label' => 'Veille active' ),
         ),
         'image'    => RCG_URI . '/assets/images/exp-image.png',
-        'tags'     => array( 'Personal Branding' ),
+        'tags'     => array( 'Relations Publiques', 'Personal Branding' ),
     ),
     array(
         'number'   => '03',
-        'anchor'   => 'medias',
-        'eyebrow'  => 'Relations Medias',
-        'title'    => 'Medias & Relations Presse',
-        'desc'     => 'Un reseau presse panafricain et international activable sous 24h. Nous faconnons votre couverture mediatique avec la rigueur d\'un cabinet de lobbying et l\'efficacite d\'une newsroom.',
+        'anchor'   => 'relations-presse',
+        'eyebrow'  => 'Relations Presse & Medias',
+        'title'    => 'Relations Presse & Couverture Mediatique',
+        'desc'     => 'Un reseau presse panafricain et international mobilisable rapidement. RCG organise votre visibilite mediatique avec precision : conferences de presse, communiques, media training et voyages de presse en Afrique de l\'Ouest.',
         'bg'       => 'surface-dark',
         'layout'   => 'text-left',
         'list'     => 'hover',
         'items'    => array(
-            array( 'title' => 'Cartographie presse Afrique & International' ),
-            array( 'title' => 'Conferences & voyages de presse' ),
-            array( 'title' => 'Press kits & communiques premium' ),
-            array( 'title' => 'Media training & coaching porte-paroles' ),
+            array( 'title' => 'Cartographie presse Afrique de l\'Ouest & International' ),
+            array( 'title' => 'Organisation de conferences et voyages de presse' ),
+            array( 'title' => 'Redaction de communiques et dossiers de presse premium' ),
+            array( 'title' => 'Media training et preparation des porte-paroles institutionnels' ),
         ),
         'quote'    => '',
         'stats'    => array(),
@@ -94,18 +94,18 @@ $static_expertises = array(
     ),
     array(
         'number'   => '04',
-        'anchor'   => 'editorial',
-        'eyebrow'  => 'Contenu & Editorial',
-        'title'    => 'Production Editoriale & Contenus',
-        'desc'     => 'Des contenus premium qui positionnent vos dirigeants comme des references : tribunes, discours, rapports annuels et publications institutionnelles d\'exception.',
+        'anchor'   => 'contenus',
+        'eyebrow'  => 'Creation de Contenus',
+        'title'    => 'Creation de Contenus & Production Editoriale',
+        'desc'     => 'Contenus strategiques qui positionnent vos dirigeants comme des references : tribunes, discours, rapports annuels, publications institutionnelles et contenus digitaux. Une expertise editoriale au service de votre credibilite.',
         'bg'       => 'white',
         'layout'   => 'text-right',
         'list'     => 'arrows',
         'items'    => array(
-            array( 'desc' => 'Tribunes et prises de parole strategiques' ),
-            array( 'desc' => 'Discours institutionnels et speechwriting' ),
-            array( 'desc' => 'Rapports annuels et publications corporate' ),
-            array( 'desc' => 'Contenus digitaux et strategie editoriale' ),
+            array( 'desc' => 'Tribunes, editoriaux et prises de parole strategiques' ),
+            array( 'desc' => 'Speechwriting et discours institutionnels sur mesure' ),
+            array( 'desc' => 'Rapports annuels, bilans d\'activite et publications corporate' ),
+            array( 'desc' => 'Contenus digitaux, strategie editoriale web et reseaux sociaux' ),
         ),
         'quote'    => '',
         'stats'    => array(),
@@ -114,16 +114,16 @@ $static_expertises = array(
     array(
         'number'   => '05',
         'anchor'   => 'crise',
-        'eyebrow'  => 'Gestion de Crise',
-        'title'    => 'Communication de Crise',
-        'desc'     => 'Dispositif de crise active 24/7 : anticipation, cellule de crise, media management et reconstruction de la reputation. Nous sommes votre bouclier communicationnel.',
+        'eyebrow'  => 'Communication de Crise',
+        'title'    => 'Communication de Crise & Gestion des Risques',
+        'desc'     => 'Dispositif de crise operationnel : anticipation, cellule de crise, gestion mediatique et reconstruction de reputation. RCG West Africa intervient aupres des institutions et dirigeants confrontes a des situations sensibles en Afrique.',
         'bg'       => 'dark',
         'layout'   => 'text-left',
         'list'     => 'timeline',
         'items'    => array(
-            array( 'icon' => '!', 'title' => 'Alerte & Activation', 'desc' => 'Detection precoce et mobilisation de la cellule de crise sous 2h.' ),
-            array( 'icon' => '>', 'title' => 'Pilotage Operationnel', 'desc' => 'Strategie de reponse, elements de langage et coordination media.' ),
-            array( 'icon' => '+', 'title' => 'Reconstruction', 'desc' => 'Plan de rehabilitation de l\'image et monitoring post-crise.' ),
+            array( 'icon' => '!', 'title' => 'Alerte & Activation Rapide', 'desc' => 'Detection precoce des signaux faibles et mobilisation immediate de la cellule de crise RCG.' ),
+            array( 'icon' => '>', 'title' => 'Pilotage & Gestion Operationnelle', 'desc' => 'Strategie de reponse, elements de langage, coordination media et accompagnement des porte-paroles.' ),
+            array( 'icon' => '+', 'title' => 'Reconstruction & Rehabilitation', 'desc' => 'Plan de rehabilitation de l\'image, veille post-crise et reconstruction progressive de la confiance.' ),
         ),
         'quote'    => '',
         'stats'    => array(),
@@ -131,22 +131,22 @@ $static_expertises = array(
     ),
     array(
         'number'   => '06',
-        'anchor'   => 'branding',
-        'eyebrow'  => 'Identite & Marque',
-        'title'    => 'Branding & Identite Institutionnelle',
-        'desc'     => 'Creation et evolution d\'identites visuelles qui incarnent la puissance et la credibilite de votre institution. Du logo a l\'ecosysteme de marque complet.',
+        'anchor'   => 'branding-evenementiel',
+        'eyebrow'  => 'Branding & Evenementiel',
+        'title'    => 'Branding Institutionnel & Evenementiel de Haut Niveau',
+        'desc'     => 'Identites visuelles qui incarnent la credibilite de votre institution, et evenements strategiques de haut niveau : sommets, conferences internationales, forums et ceremonies. RCG concoit et pilote des evenements institutionnels majeurs en Afrique de l\'Ouest.',
         'bg'       => 'white',
         'layout'   => 'text-left',
         'list'     => 'cards',
         'items'    => array(
             array( 'icon' => 'palette', 'title' => 'Identite Visuelle' ),
             array( 'icon' => 'menu_book', 'title' => 'Charte Graphique' ),
-            array( 'icon' => 'language', 'title' => 'Ecosysteme' ),
-            array( 'icon' => 'trending_up', 'title' => 'Evolution Marque' ),
-            array( 'icon' => 'devices', 'title' => 'Digital Design' ),
-            array( 'icon' => 'print', 'title' => 'Print & Edition' ),
+            array( 'icon' => 'event', 'title' => 'Sommets & Conferences' ),
+            array( 'icon' => 'groups', 'title' => 'Forums Institutionnels' ),
+            array( 'icon' => 'devices', 'title' => 'Digital & Web Design' ),
+            array( 'icon' => 'school', 'title' => 'Formation & Coaching' ),
         ),
-        'quote'    => 'Une identite institutionnelle forte est le socle de toute strategie de communication credible.',
+        'quote'    => 'L\'identite institutionnelle et l\'evenementiel sont les vitrines de votre credibilite. — RCG West Africa',
         'stats'    => array(),
         'image'    => '',
     ),
@@ -155,7 +155,9 @@ $static_expertises = array(
 $contact_page = get_page_by_path( 'contact' );
 $contact_url  = $contact_page ? get_permalink( $contact_page ) : '#';
 $reals_url    = get_permalink( get_page_by_path( 'realisations' ) );
-if ( ! $reals_url ) $reals_url = '#';
+if ( ! $reals_url ) {
+    $reals_url = '#';
+}
 ?>
 
 <!-- ============================================
@@ -185,12 +187,12 @@ if ( ! $reals_url ) $reals_url = '#';
                 <span class="text-white/60 text-[9px] uppercase tracking-widest font-semibold">Expertises</span>
             </div>
 
-            <span class="eyebrow mb-6">&mdash; Domaines d'Intervention</span>
+            <span class="eyebrow mb-6">&mdash; Nos Expertises en Communication</span>
 
             <h1 class="font-black text-5xl lg:text-[72px] uppercase leading-[1.05] mb-8 tracking-tight mt-4">
                 <?php
                 $hero_title = get_field( 'expertise_hero_title' );
-                echo esc_html( $hero_title ? $hero_title : 'Six leviers au service de votre influence' );
+                echo esc_html( $hero_title ? $hero_title : 'Dix domaines d\'expertise au service de votre influence' );
                 ?>
             </h1>
 
@@ -199,7 +201,7 @@ if ( ! $reals_url ) $reals_url = '#';
             <p class="text-white/60 text-lg max-w-xl leading-relaxed font-light">
                 <?php
                 $hero_desc = get_field( 'expertise_hero_description' );
-                echo esc_html( $hero_desc ? $hero_desc : 'Six poles d\'excellence pour maitriser chaque dimension de la communication institutionnelle ouest-africaine — avec une precision et une exigence hors normes.' );
+                echo esc_html( $hero_desc ? $hero_desc : 'Conseil strategique, communication de crise, relations publiques, branding institutionnel, evenementiel, creation de contenus, veille, formation, relations presse et digital. RCG West Africa maitrise chaque levier de la communication institutionnelle en Afrique de l\'Ouest.' );
                 ?>
             </p>
 
@@ -212,7 +214,9 @@ if ( ! $reals_url ) $reals_url = '#';
                         $expertises->the_post();
                         $anchor = get_field( 'expertise_anchor', get_the_ID() );
                         $number = get_field( 'expertise_number', get_the_ID() );
-                        if ( ! $anchor ) $anchor = sanitize_title( get_the_title() );
+                        if ( ! $anchor ) {
+                            $anchor = sanitize_title( get_the_title() );
+                        }
                 ?>
                     <a href="#<?php echo esc_attr( $anchor ); ?>" class="tag-pill text-white/50 border-white/20 hover:text-primary hover:border-primary transition-colors">
                         <?php echo esc_html( $number ); ?> &mdash; <?php echo esc_html( get_the_title() ); ?>
@@ -253,7 +257,9 @@ if ( $use_dynamic ) :
         $list_type = get_field( 'expertise_list_type' ) ?: 'arrows';
         $exp_title = get_the_title();
         $exp_desc  = get_the_excerpt();
-        if ( ! $anchor ) $anchor = sanitize_title( $exp_title );
+        if ( ! $anchor ) {
+            $anchor = sanitize_title( $exp_title );
+        }
         $image_url = $image ? $image['url'] : '';
         $image_alt = $image ? $image['alt'] : $exp_title;
 
@@ -290,11 +296,11 @@ endif;
 <section class="bg-primary py-20">
     <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
-            <h2 class="font-black text-3xl lg:text-4xl uppercase tracking-tight text-white">Un besoin specifique ?</h2>
-            <p class="text-white/70 mt-2 text-lg">Notre equipe analyse votre contexte et vous propose une approche sur mesure.</p>
+            <h2 class="font-black text-3xl lg:text-4xl uppercase tracking-tight text-white">Un enjeu de communication institutionnelle ?</h2>
+            <p class="text-white/70 mt-2 text-lg">Conseil strategique, crise, relations publiques ou evenementiel — parlons de votre projet.</p>
         </div>
         <a href="<?php echo esc_url( $contact_url ); ?>" class="bg-white text-primary font-bold text-xs uppercase tracking-widest px-10 py-5 hover:scale-105 transition-transform inline-block whitespace-nowrap">
-            Planifier un echange
+            Contactez RCG
         </a>
     </div>
 </section>

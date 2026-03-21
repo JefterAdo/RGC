@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-$footer_desc = get_theme_mod( 'rcg_footer_description', 'Agence conseil de reference specialisee dans la communication institutionnelle en Afrique de l\'Ouest.' );
-$copyright   = get_theme_mod( 'rcg_footer_copyright', '&copy; ' . date( 'Y' ) . ' RCG West Africa. Tous droits reserves.' );
-$newsletter  = get_theme_mod( 'rcg_newsletter_text', 'Recevez nos analyses strategiques sur la region.' );
+$footer_desc = get_theme_mod( 'rcg_footer_description', 'Premiere agence africaine de communication institutionnelle, politique et sociale. Conseil strategique, relations publiques et branding au service des decideurs en Afrique de l\'Ouest.' );
+$copyright   = get_theme_mod( 'rcg_footer_copyright', '&copy; ' . wp_date( 'Y' ) . ' RCG West Africa. Tous droits reserves.' );
+$newsletter  = get_theme_mod( 'rcg_newsletter_text', 'Recevez nos analyses et insights sur la communication institutionnelle en Afrique.' );
 ?>
 
 <footer class="bg-background-dark border-t-4 border-primary pt-20 pb-10 text-white">
@@ -75,13 +75,12 @@ $newsletter  = get_theme_mod( 'rcg_newsletter_text', 'Recevez nos analyses strat
                     ?>
                     <li>
                         <strong class="text-white block mb-1">Abidjan, Cote d'Ivoire</strong>
-                        Cite des cadres, Cocody Ambassades<br>
-                        BP 452 Abidjan 01
+                        Cocody 8e Tranche<br>
+                        Abidjan, Cote d'Ivoire
                     </li>
-                    <li>
-                        <strong class="text-white block mb-1">Paris, France</strong>
-                        8 Rue de la Paix<br>
-                        75002 Paris
+                    <li class="pt-2">
+                        <span class="text-white/60 text-xs block"><strong class="text-white">Tel :</strong> +225 25 22 00 46 71</span>
+                        <span class="text-white/60 text-xs block mt-1"><strong class="text-white">Email :</strong> info@rcgwestafrica.com</span>
                     </li>
                 <?php endif; ?>
             </ul>

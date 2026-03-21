@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // === Donnees ACF (avec fallbacks) ===
-$eyebrow    = get_field( 'ap_eyebrow' ) ?: 'Notre Philosophie';
-$hero_title = get_field( 'ap_title' ) ?: 'Nous donnons toujours plus que promis.';
-$hero_desc  = get_field( 'ap_desc' ) ?: 'Chez RCG, nous ne nous contentons pas de répondre aux attentes — nous les surpassons. Fondée sur l\'excellence et la rigueur, notre agence est l\'architecte invisible des grandes ambitions institutionnelles en Afrique de l\'Ouest.';
+$eyebrow    = get_field( 'ap_eyebrow' ) ?: 'Agence RCG West Africa';
+$hero_title = get_field( 'ap_title' ) ?: 'La premiere agence africaine de communication institutionnelle.';
+$hero_desc  = get_field( 'ap_desc' ) ?: 'Fondee a Abidjan, RCG West Africa accompagne les decideurs, institutions et organisations en Afrique de l\'Ouest avec une expertise unique en conseil strategique, relations publiques, communication de crise et branding institutionnel.';
 $hero_img   = get_field( 'ap_hero_image' );
 $hero_url   = $hero_img ? $hero_img['url'] : get_template_directory_uri() . '/assets/images/apropos-hero.png';
 
@@ -23,41 +23,41 @@ $hero_url   = $hero_img ? $hero_img['url'] : get_template_directory_uri() . '/as
 $stats = get_field( 'ap_stats' );
 if ( ! $stats ) {
     $stats = array(
-        array( 'value' => '2006', 'label' => 'Année de fondation', 'highlight' => true ),
-        array( 'value' => '15',   'label' => 'Pays d\'intervention', 'highlight' => false ),
-        array( 'value' => '120+', 'label' => 'Missions accomplies', 'highlight' => false ),
-        array( 'value' => '50+',  'label' => 'Dirigeants accompagnés', 'highlight' => false ),
+        array( 'value' => '15+',  'label' => 'Annees d\'expertise', 'highlight' => true ),
+        array( 'value' => '10+',  'label' => 'Pays d\'intervention en Afrique', 'highlight' => false ),
+        array( 'value' => '50+',  'label' => 'Clients institutionnels & prives', 'highlight' => false ),
+        array( 'value' => '100+', 'label' => 'Missions strategiques realisees', 'highlight' => false ),
     );
 }
 
 // Histoire
-$hist_title = get_field( 'ap_hist_title' ) ?: 'Une agence née de l\'exigence';
+$hist_title = get_field( 'ap_hist_title' ) ?: 'Nee de l\'exigence, forgee par le terrain';
 $hist_text  = get_field( 'ap_hist_text' );
 $hist_image = get_field( 'ap_hist_image' );
 $hist_img_url = $hist_image ? $hist_image['url'] : get_template_directory_uri() . '/assets/images/apropos-direction.png';
-$hist_quote = get_field( 'ap_hist_quote' ) ?: 'Notre mission n\'est pas d\'être visibles. Notre mission est de vous rendre inoubliables.';
+$hist_quote = get_field( 'ap_hist_quote' ) ?: 'Nous ne communiquons pas pour etre vus. Nous communiquons pour que nos clients marquent les esprits.';
 
 // Timeline
 $timeline = get_field( 'ap_timeline' );
 if ( ! $timeline ) {
     $timeline = array(
-        array( 'abbr' => '06', 'year' => '2006', 'title' => 'Fondation à Abidjan',              'description' => 'Création de l\'agence avec la conviction que l\'Afrique de l\'Ouest méritait des stratèges de haut niveau.', 'is_current' => false ),
-        array( 'abbr' => '18', 'year' => '2018', 'title' => 'Premiers Mandats Gouvernementaux',  'description' => 'Confiance accordée par les premières institutions publiques d\'envergure — un tournant décisif.', 'is_current' => false ),
-        array( 'abbr' => '21', 'year' => '2021', 'title' => 'Expansion Panafricaine',            'description' => 'Extension des opérations à 15 pays — du Sénégal au Nigeria, du Bénin au Cameroun.', 'is_current' => false ),
-        array( 'abbr' => '25', 'year' => '2025', 'title' => 'Bureau de Liaison Paris',           'description' => 'Ouverture du bureau parisien pour renforcer la présence diplomatique et institutionnelle en Europe.', 'is_current' => true ),
+        array( 'abbr' => 'RCG', 'year' => 'Fondation', 'title' => 'Creation a Abidjan, Cote d\'Ivoire', 'description' => 'RCG West Africa nait de la conviction qu\'il faut des strateges africains de haut niveau pour accompagner les institutions et decideurs du continent.', 'is_current' => false ),
+        array( 'abbr' => 'GOV', 'year' => 'Croissance', 'title' => 'Mandats Institutionnels Majeurs', 'description' => 'Premiers mandats gouvernementaux et institutionnels d\'envergure. Confiance accordee par la CEDEAO, la BAD (AFAWA) et des agences etatiques.', 'is_current' => false ),
+        array( 'abbr' => 'AFR', 'year' => 'Expansion', 'title' => 'Rayonnement Panafricain', 'description' => 'Extension des operations en Afrique de l\'Ouest et au-dela : Cote d\'Ivoire, Senegal, Ghana, Nigeria, Benin, Togo, Cameroun et plus.', 'is_current' => false ),
+        array( 'abbr' => 'NOW', 'year' => '2025', 'title' => 'Leader Regional en Communication Institutionnelle', 'description' => 'RCG s\'impose comme la reference en communication institutionnelle, politique et sociale en Afrique de l\'Ouest, avec un portefeuille clients de premier plan.', 'is_current' => true ),
     );
 }
 
 // ADN / Piliers
-$adn_quote = get_field( 'ap_adn_quote' ) ?: 'L\'excellence n\'est pas un objectif. C\'est notre point de départ.';
+$adn_quote = get_field( 'ap_adn_quote' ) ?: 'L\'excellence n\'est pas un objectif. C\'est notre standard operationnel quotidien.';
 $piliers   = get_field( 'ap_piliers' );
 if ( ! $piliers ) {
     $piliers = array(
-        array( 'letter' => 'R', 'title' => 'Réactivité',       'description' => 'Capacité à déployer une force de frappe stratégique et opérationnelle sous 24h, quelle que soit la complexité de la situation.' ),
-        array( 'letter' => 'R', 'title' => 'Rigueur',          'description' => 'Exécution des mandats avec une précision d\'orfèvre — sans jamais sacrifier la justesse de l\'analyse à la vitesse d\'intervention.' ),
-        array( 'letter' => 'S', 'title' => 'Surentraînement',  'description' => 'Une équipe dont la formation continue permet de dominer les crises les plus complexes avec sérénité et maîtrise.' ),
-        array( 'letter' => 'D', 'title' => 'Discrétion',       'description' => 'Confidentialité absolue : nous sommes les architectes invisibles de votre influence. Votre succès est notre seule signature.' ),
-        array( 'letter' => 'P', 'title' => 'Précision',        'description' => 'Livrables sans faille. Chaque mot, chaque virgule, chaque action est calculée pour produire un impact maximal et mesurable.' ),
+        array( 'letter' => 'C', 'title' => 'Conseil Strategique',  'description' => 'Analyse approfondie de votre environnement institutionnel et elaboration de strategies de communication sur mesure, alignees avec vos objectifs.' ),
+        array( 'letter' => 'R', 'title' => 'Reactivite',           'description' => 'Capacite a deployer une force de frappe operationnelle rapide — essentielle en communication de crise et dans les contextes institutionnels sensibles.' ),
+        array( 'letter' => 'T', 'title' => 'Terrain',              'description' => 'Ancrage profond en Afrique de l\'Ouest, connaissance des codes culturels et des ecosystemes politiques locaux. De Abidjan a Dakar, du Nigeria au Cameroun.' ),
+        array( 'letter' => 'D', 'title' => 'Discretion',           'description' => 'Confidentialite absolue sur chaque mandat. Nous accompagnons des decideurs et institutions de premier plan avec la plus stricte reserve professionnelle.' ),
+        array( 'letter' => 'I', 'title' => 'Impact Mesurable',     'description' => 'Chaque mission est pilotee par des indicateurs de performance clairs. Relations presse, evenementiel, branding : nous mesurons et rendons compte de chaque action.' ),
     );
 }
 
@@ -67,11 +67,11 @@ $valeurs_img_url = $valeurs_image ? $valeurs_image['url'] : get_template_directo
 $valeurs = get_field( 'ap_valeurs' );
 if ( ! $valeurs ) {
     $valeurs = array(
-        array( 'icon' => 'verified',    'title' => 'Excellence sans compromis',          'description' => 'Chaque livrable est traité avec le niveau d\'exigence d\'une opération critique, qu\'il s\'agisse d\'un discours ou d\'un plan global.' ),
-        array( 'icon' => 'handshake',   'title' => 'Partenariat sur le long terme',      'description' => 'Nous refusons la logique de prestataire. Nous nous positionnons comme des partenaires stratégiques investis dans votre réussite durable.' ),
-        array( 'icon' => 'diversity_3', 'title' => 'Ancrage africain, vision mondiale',  'description' => 'Nous maîtrisons les codes culturels locaux tout en appliquant les meilleures pratiques internationales — un équilibre rare et décisif.' ),
-        array( 'icon' => 'lock',        'title' => 'Confidentialité absolue',            'description' => 'La confiance est la pierre angulaire de notre relation. Chaque engagement est protégé par un cadre strict de discrétion professionnelle.' ),
-        array( 'icon' => 'trending_up', 'title' => 'Impact mesurable',                  'description' => 'Nous définissons des KPIs clairs avant chaque mission et livrons des rapports de performance rigoureux. L\'impact se prouve, il ne se déclare pas.' ),
+        array( 'icon' => 'verified',    'title' => 'Excellence operationnelle',           'description' => 'Chaque mission — qu\'il s\'agisse de creation de contenus, de conseil strategique ou d\'evenementiel — est executee avec les plus hauts standards de qualite.' ),
+        array( 'icon' => 'handshake',   'title' => 'Partenariat strategique durable',     'description' => 'Nous ne sommes pas des prestataires. Nous sommes les partenaires strategiques de nos clients : CEDEAO, BAD, gouvernements, entreprises leaders.' ),
+        array( 'icon' => 'diversity_3', 'title' => 'Ancrage africain, standards mondiaux', 'description' => 'Basee a Abidjan avec un reseau dans toute l\'Afrique de l\'Ouest, RCG maitrise les codes culturels locaux et les meilleures pratiques internationales.' ),
+        array( 'icon' => 'lock',        'title' => 'Confidentialite et integrite',        'description' => 'La confiance est le fondement de chaque relation. Communication politique, gestion de crise, relations publiques : chaque mandat est protege par la plus stricte discretion.' ),
+        array( 'icon' => 'trending_up', 'title' => 'Resultats concrets et mesurables',    'description' => 'KPIs definis en amont, rapports de performance rigoureux. De la veille strategique a la formation, chaque action est pilotee par les resultats.' ),
     );
 }
 
@@ -79,8 +79,7 @@ if ( ! $valeurs ) {
 $bureaux = get_field( 'ap_bureaux' );
 if ( ! $bureaux ) {
     $bureaux = array(
-        array( 'city' => 'Abidjan, Côte d\'Ivoire', 'subtitle' => 'Siège Social · Bureau Principal', 'address' => 'Cité des Cadres, Cocody Ambassades — BP 452 Abidjan 01', 'description' => 'Centre de commandement opérationnel et stratégique pour toute l\'Afrique de l\'Ouest.', 'tags' => 'Hub Stratégique, Cellule de Crise', 'dot_color' => 'red' ),
-        array( 'city' => 'Paris, France', 'subtitle' => 'Bureau de Liaison · Europe', 'address' => '8 Rue de la Paix, 75002 Paris', 'description' => 'Interface diplomatique et institutionnelle pour les relations franco-africaines et les organisations internationales.', 'tags' => 'Diplomatie, Relations Intl.', 'dot_color' => 'green' ),
+        array( 'city' => 'Abidjan, Cote d\'Ivoire', 'subtitle' => 'Siege Social · Bureau Principal', 'address' => 'Cocody 8e Tranche, Abidjan — Tel : +225 25 22 00 46 71', 'description' => 'Centre de commandement operationnel et strategique pour toute l\'Afrique de l\'Ouest. Email : info@rcgwestafrica.com', 'tags' => 'Hub Strategique, Cellule de Crise, Direction Generale', 'dot_color' => 'red' ),
     );
 }
 
@@ -88,21 +87,18 @@ if ( ! $bureaux ) {
 $pays = get_field( 'ap_pays' );
 if ( ! $pays ) {
     $pays = array(
-        array( 'name' => 'Côte d\'Ivoire', 'is_special' => false ),
-        array( 'name' => 'Sénégal',        'is_special' => false ),
-        array( 'name' => 'Mali',            'is_special' => false ),
-        array( 'name' => 'Burkina Faso',    'is_special' => false ),
+        array( 'name' => 'Cote d\'Ivoire', 'is_special' => false ),
+        array( 'name' => 'Senegal',        'is_special' => false ),
         array( 'name' => 'Ghana',           'is_special' => false ),
         array( 'name' => 'Nigeria',         'is_special' => false ),
-        array( 'name' => 'Bénin',           'is_special' => false ),
+        array( 'name' => 'Benin',           'is_special' => false ),
         array( 'name' => 'Togo',            'is_special' => false ),
-        array( 'name' => 'Cameroun',        'is_special' => false ),
-        array( 'name' => 'Guinée',          'is_special' => false ),
+        array( 'name' => 'Mali',            'is_special' => false ),
+        array( 'name' => 'Burkina Faso',    'is_special' => false ),
+        array( 'name' => 'Guinee',          'is_special' => false ),
         array( 'name' => 'Niger',           'is_special' => false ),
-        array( 'name' => 'Gabon',           'is_special' => false ),
-        array( 'name' => 'Congo',           'is_special' => false ),
-        array( 'name' => 'Maroc',           'is_special' => false ),
-        array( 'name' => '+ Europe',        'is_special' => true ),
+        array( 'name' => 'Cameroun',        'is_special' => false ),
+        array( 'name' => '+ CEDEAO',        'is_special' => true ),
     );
 }
 
@@ -110,10 +106,10 @@ if ( ! $pays ) {
 $eq_stats = get_field( 'ap_equipe_stats' );
 if ( ! $eq_stats ) {
     $eq_stats = array(
-        array( 'value' => '25+',  'label' => 'Collaborateurs',     'color' => 'primary' ),
-        array( 'value' => '12',   'label' => 'Nationalités',       'color' => 'dark' ),
-        array( 'value' => '8',    'label' => 'Langues maîtrisées', 'color' => 'dark' ),
-        array( 'value' => '100%', 'label' => 'Engagement client',  'color' => 'green' ),
+        array( 'value' => '20+',  'label' => 'Experts & Consultants',  'color' => 'primary' ),
+        array( 'value' => '10+',  'label' => 'Domaines d\'expertise',  'color' => 'dark' ),
+        array( 'value' => '6+',   'label' => 'Langues maitrisees',     'color' => 'dark' ),
+        array( 'value' => '100%', 'label' => 'Engagement client',      'color' => 'green' ),
     );
 }
 
@@ -129,9 +125,9 @@ if ( ! $poles ) {
 }
 
 // CTA
-$cta_title = get_field( 'ap_cta_title' ) ?: 'Rejoignez nos clients d\'exception.';
-$cta_desc  = get_field( 'ap_cta_desc' ) ?: 'Notre équipe analyse votre contexte et vous propose une approche entièrement sur mesure.';
-$cta_btn   = get_field( 'ap_cta_btn' ) ?: 'Démarrer votre projet';
+$cta_title = get_field( 'ap_cta_title' ) ?: 'Parlons de vos enjeux strategiques.';
+$cta_desc  = get_field( 'ap_cta_desc' ) ?: 'Conseil strategique, communication de crise, relations publiques ou evenementiel : notre equipe analyse votre contexte et propose une approche sur mesure.';
+$cta_btn   = get_field( 'ap_cta_btn' ) ?: 'Contactez-nous';
 
 $contact_page = get_page_by_path( 'contact' );
 $contact_url  = $contact_page ? get_permalink( $contact_page ) : '#';
@@ -247,8 +243,9 @@ $anchors = array(
                 <?php if ( $hist_text ) : ?>
                     <div class="text-gray-500 text-sm leading-relaxed space-y-4"><?php echo wp_kses_post( $hist_text ); ?></div>
                 <?php else : ?>
-                    <p class="text-gray-500 text-sm leading-relaxed">RCG est avant tout une réponse au besoin croissant des décideurs africains de s'entourer de stratèges capables d'allier les standards internationaux au pragmatisme du terrain.</p>
-                    <p class="text-gray-500 text-sm leading-relaxed mt-4">Notre équipe pluridisciplinaire agit dans l'ombre pour garantir que votre image, vos messages et vos objectifs soient protégés et propulsés avec la plus grande efficacité imaginable. Nous ne sommes pas une agence de communication ordinaire — nous sommes vos architectes de l'influence.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">RCG West Africa est nee d'un constat : les decideurs et institutions d'Afrique de l'Ouest ont besoin de partenaires strategiques capables de conjuguer expertise internationale et connaissance approfondie des realites africaines.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed mt-4">Basee a Abidjan (Cocody), notre agence reunit des strateges, des experts en relations publiques, des conseillers en communication de crise et des specialistes du branding institutionnel. Nous accompagnons gouvernements, organisations internationales comme la CEDEAO et la BAD, ainsi que des entreprises leaders du secteur prive.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed mt-4">Notre approche : creation de contenus, conseil strategique, relations presse, evenementiel de haut niveau, veille et formation — chaque mission est concue sur mesure pour un impact mesurable et durable.</p>
                 <?php endif; ?>
 
                 <!-- Timeline -->
@@ -288,7 +285,8 @@ $anchors = array(
                     <blockquote class="quote-bar font-lora italic text-white/80 text-lg leading-relaxed">
                         "<?php echo esc_html( $hist_quote ); ?>"
                     </blockquote>
-                    <span class="text-[9px] uppercase tracking-widest text-white/40 mt-4 block"><?php esc_html_e( 'Direction Générale · RCG West Africa', 'rcg' ); ?></span>
+                    <span class="text-white text-xs font-bold block mt-4">Ibrahim KOUROUMA</span>
+                    <span class="text-[9px] uppercase tracking-widest text-white/40 mt-1 block"><?php esc_html_e( 'Fondateur & Directeur General · RCG West Africa', 'rcg' ); ?></span>
                 </div>
 
                 <!-- Accent rouge en bas -->
@@ -311,15 +309,15 @@ $anchors = array(
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Notre ADN', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-5xl uppercase leading-tight tracking-tight mt-2">Les 5 piliers<br>de l'excellence</h2>
                 <div class="line-accent mt-4 mb-6"></div>
-                <p class="text-white/60 text-sm leading-relaxed max-w-xl">Ce que nous appelons en interne le "Code Ninja" — la méthodologie absolue qui guide chacune de nos opérations de communication à travers l'Afrique et au-delà.</p>
+                <p class="text-white/60 text-sm leading-relaxed max-w-xl">Les cinq piliers qui guident chacune de nos missions de communication institutionnelle, de conseil strategique et de relations publiques en Afrique de l'Ouest.</p>
             </div>
 
             <!-- Encart citation rouge -->
             <div class="bg-primary text-white p-8 flex flex-col justify-center">
                 <p class="font-lora italic text-sm text-white/90 leading-relaxed">"<?php echo esc_html( $adn_quote ); ?>"</p>
                 <div class="mt-6 pt-4 border-t border-white/20">
-                    <span class="text-3xl font-black">18</span>
-                    <span class="text-[10px] uppercase tracking-widest text-white/60 ml-2">Années d'expertise</span>
+                    <span class="text-3xl font-black">15+</span>
+                    <span class="text-[10px] uppercase tracking-widest text-white/60 ml-2">Annees d'expertise</span>
                 </div>
             </div>
         </div>
@@ -360,7 +358,7 @@ $anchors = array(
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Ce Qui Nous Définit', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-4xl uppercase leading-tight tracking-tight mt-2"><?php esc_html_e( 'Valeurs & Engagements', 'rcg' ); ?></h2>
                 <div class="line-accent mt-4 mb-6"></div>
-                <p class="text-gray-500 text-sm leading-relaxed mb-8">Nos valeurs ne sont pas des slogans accrochés au mur. Ce sont des engagements concrets que nous prenons vis-à-vis de chaque client, chaque jour, sur chaque mission.</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8">Nos valeurs guident chaque mandat, de la creation de contenus au conseil strategique, de la gestion de crise a l'evenementiel institutionnel. Ce sont des engagements concrets envers nos clients.</p>
 
                 <!-- Liste de valeurs -->
                 <div class="space-y-0">
@@ -388,7 +386,7 @@ $anchors = array(
 <section id="presence" class="py-24 bg-background-dark text-white relative overflow-hidden scroll-mt-24 reveal">
     <!-- Grand "15" decoratif -->
     <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none">
-        <span class="font-black text-[400px] leading-none text-white tracking-tighter">15</span>
+        <span class="font-black text-[400px] leading-none text-white tracking-tighter">10+</span>
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
@@ -396,7 +394,7 @@ $anchors = array(
         <span class="eyebrow mb-4"><?php esc_html_e( 'Présence Régionale', 'rcg' ); ?></span>
         <h2 class="font-black text-3xl lg:text-5xl uppercase leading-tight tracking-tight mt-2">Ancrés en Afrique,<br>connectés au monde</h2>
         <div class="line-accent mt-4 mb-6"></div>
-        <p class="text-white/60 text-sm leading-relaxed max-w-2xl mb-16">Deux bureaux permanents. Un réseau de correspondants dans 15 pays. Une capacité d'intervention panafricaine mobilisable en moins de 48 heures.</p>
+        <p class="text-white/60 text-sm leading-relaxed max-w-2xl mb-16">Siege social a Abidjan, Cocody 8e Tranche. Un reseau de correspondants dans plus de 10 pays d'Afrique de l'Ouest et de la zone CEDEAO. Une capacite d'intervention regionale rapide et efficace.</p>
 
         <div class="grid lg:grid-cols-2 gap-16 items-start">
             <!-- Bureaux -->
@@ -462,7 +460,7 @@ $anchors = array(
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Les Hommes & Femmes RCG', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-4xl uppercase leading-tight tracking-tight mt-2">Une équipe d'élite<br>à votre service</h2>
                 <div class="line-accent mt-4 mb-6"></div>
-                <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Des stratèges, des journalistes, des experts en relations publiques et des conseillers politiques — une équipe pluridisciplinaire soudée par une ambition commune : l'excellence de la communication institutionnelle africaine.</p>
+                <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Strateges, experts en relations publiques, conseillers en communication politique, specialistes du digital et du branding — une equipe pluridisciplinaire dediee a l'excellence de la communication institutionnelle en Afrique.</p>
             </div>
 
             <!-- Stats equipe -->

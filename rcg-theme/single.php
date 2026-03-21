@@ -63,7 +63,7 @@ while ( have_posts() ) :
                     <?php echo esc_html( $author_init ); ?>
                 </div>
                 <div>
-                    <div class="text-white font-bold text-sm"><?php the_author(); ?></div>
+                    <div class="text-white font-bold text-sm"><?php echo esc_html( get_the_author() ); ?></div>
                     <?php if ( $author_title ) : ?>
                         <div class="text-white/40 text-xs"><?php echo esc_html( $author_title ); ?></div>
                     <?php endif; ?>

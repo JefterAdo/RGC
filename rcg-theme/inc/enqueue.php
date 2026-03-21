@@ -29,42 +29,19 @@ function rcg_enqueue_assets() {
         null
     );
 
-    // Tailwind CSS via CDN (avec config RCG)
-    wp_enqueue_script(
-        'rcg-tailwind-cdn',
-        'https://cdn.tailwindcss.com',
+    // Tailwind CSS (compiled local build)
+    wp_enqueue_style(
+        'rcg-tailwind',
+        RCG_URI . '/assets/css/tailwind-output.css',
         array(),
-        null,
-        false
+        RCG_VERSION
     );
 
-    // Configuration Tailwind inline (couleurs RCG)
-    wp_add_inline_script( 'rcg-tailwind-cdn', "
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#CC151B',
-                        'background-dark': '#0A0A0A',
-                        'background-light': '#FFFFFF',
-                        'surface-dark': '#1C1C1C',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    borderRadius: {
-                        btn: '2px',
-                    },
-                },
-            },
-        }
-    " );
-
-    // Couleurs RCG + surcharges + styles prose
+    // Custom component styles (non-utility)
     wp_enqueue_style(
         'rcg-colors',
         RCG_URI . '/assets/css/rcg-colors.css',
-        array(),
+        array( 'rcg-tailwind' ),
         RCG_VERSION
     );
 

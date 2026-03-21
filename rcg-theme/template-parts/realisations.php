@@ -16,7 +16,8 @@ $realisations_query = new WP_Query( array(
     'order'          => 'DESC',
 ) );
 
-$archive_link = get_post_type_archive_link( 'realisation' );
+$reals_page = get_page_by_path( 'realisations' );
+$archive_link = $reals_page ? get_permalink( $reals_page ) : home_url( '/realisations/' );
 ?>
 
 <section class="bg-white py-24">
@@ -26,11 +27,9 @@ $archive_link = get_post_type_archive_link( 'realisation' );
                 <span class="text-primary font-bold text-sm tracking-widest uppercase">&mdash; <?php esc_html_e( 'Realisations', 'rcg' ); ?></span>
                 <h2 class="text-background-dark text-4xl font-black uppercase mt-4"><?php esc_html_e( 'Etudes de cas', 'rcg' ); ?></h2>
             </div>
-            <?php if ( $archive_link ) : ?>
-                <a class="hidden lg:block text-xs font-bold uppercase tracking-widest border-b border-background-dark pb-1" href="<?php echo esc_url( $archive_link ); ?>">
-                    <?php esc_html_e( 'Voir tout', 'rcg' ); ?>
-                </a>
-            <?php endif; ?>
+            <a class="hidden lg:block text-xs font-bold uppercase tracking-widest border-b border-background-dark pb-1" href="<?php echo esc_url( $archive_link ); ?>">
+                <?php esc_html_e( 'Voir tout', 'rcg' ); ?>
+            </a>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $label = rcg_get_field( 'pos_label', false, 'Notre Positionnement' );
-$title = rcg_get_field( 'pos_title', false, 'Acteur majeur de la communication institutionnelle' );
+$title = rcg_get_field( 'pos_title', false, 'Premiere agence africaine de conseil en communication institutionnelle' );
 ?>
 
 <section class="bg-white py-24 relative overflow-hidden">
@@ -42,10 +42,10 @@ $title = rcg_get_field( 'pos_title', false, 'Acteur majeur de la communication i
             else :
                 // Fallback statique
                 $cards = array(
-                    array( 'icon' => 'account_balance', 'title' => 'Institutions', 'desc' => "Accompagnement des ministeres et agences etatiques." ),
-                    array( 'icon' => 'public', 'title' => 'Org. Internationales', 'desc' => "Deploiement de programmes de plaidoyer regionaux." ),
-                    array( 'icon' => 'corporate_fare', 'title' => 'Entreprises', 'desc' => "Gestion de reputation et communication de marque." ),
-                    array( 'icon' => 'rocket_launch', 'title' => 'Projets', 'desc' => "Lancement et pilotage d'initiatives strategiques." ),
+                    array( 'icon' => 'account_balance', 'title' => 'Institutions & Gouvernements', 'desc' => "Conseil strategique pour ministeres, agences etatiques et collectivites en Afrique de l'Ouest." ),
+                    array( 'icon' => 'public', 'title' => 'Organisations Internationales', 'desc' => "Programmes de plaidoyer et communication pour la CEDEAO, BAD, et organismes regionaux." ),
+                    array( 'icon' => 'corporate_fare', 'title' => 'Entreprises & Secteur Prive', 'desc' => "Branding institutionnel, gestion de reputation et relations publiques pour les leaders economiques." ),
+                    array( 'icon' => 'rocket_launch', 'title' => 'Evenements & Sommets', 'desc' => "Conception et pilotage d'evenements institutionnels, sommets et conferences de haut niveau." ),
                 );
                 foreach ( $cards as $card ) :
                     ?>

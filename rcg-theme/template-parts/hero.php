@@ -9,14 +9,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$label       = rcg_get_field( 'hero_label', false, 'Communication Strategique' );
-$title       = rcg_get_field( 'hero_title', false, "L'intelligence au service de votre communication" );
-$description = rcg_get_field( 'hero_description', false, "Accompagner les decideurs, les institutions et les organisations dans leurs enjeux de reputation, d'influence et de visibilite en Afrique de l'Ouest." );
+$label       = rcg_get_field( 'hero_label', false, 'Communication Institutionnelle & Strategique' );
+$title       = rcg_get_field( 'hero_title', false, "Marquez les esprits. Imposez votre message." );
+$description = rcg_get_field( 'hero_description', false, "Premiere agence africaine de communication institutionnelle, politique et sociale. Une elite de strateges au service des decideurs, institutions et organisations en Afrique de l'Ouest." );
 $image       = rcg_get_field( 'hero_image' );
 $cta1_text   = rcg_get_field( 'hero_cta1_text', false, 'Decouvrir nos expertises' );
-$cta1_url    = rcg_get_field( 'hero_cta1_url', false, '#' );
+$cta1_default = get_permalink( get_page_by_path( 'expertises' ) ) ?: home_url( '/expertises/' );
+$cta1_url    = rcg_get_field( 'hero_cta1_url', false, $cta1_default );
 $cta2_text   = rcg_get_field( 'hero_cta2_text', false, 'Voir nos realisations' );
-$cta2_url    = rcg_get_field( 'hero_cta2_url', false, '#' );
+$cta2_default = get_permalink( get_page_by_path( 'realisations' ) ) ?: home_url( '/realisations/' );
+$cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
 ?>
 
 <section class="relative min-h-[95vh] bg-background-dark flex flex-col justify-center overflow-hidden">
@@ -94,9 +96,9 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, '#' );
                 else :
                     // Fallback statique
                     $counters = array(
-                        array( 'value' => '10+ ans', 'label' => "D'excellence operationnelle" ),
-                        array( 'value' => '50+ clients', 'label' => 'Institutions & Entreprises' ),
-                        array( 'value' => 'West Africa', 'label' => 'Presence & Portee regionale' ),
+                        array( 'value' => '15+ ans', 'label' => "D'expertise en communication institutionnelle" ),
+                        array( 'value' => '50+ clients', 'label' => 'Institutions, gouvernements & entreprises' ),
+                        array( 'value' => 'Afrique de l\'Ouest', 'label' => 'Abidjan - Presence regionale CEDEAO' ),
                     );
                     foreach ( $counters as $i => $counter ) :
                         $border_class = ( $i > 0 ) ? 'border-white/10 md:border-l md:pl-8' : '';

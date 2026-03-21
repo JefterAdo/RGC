@@ -12,7 +12,9 @@
  * @package RCG
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 // Classes de fond
 $bg_classes = 'bg-white';

@@ -61,7 +61,7 @@ function rcg_customize_register( $wp_customize ) {
 
     // Description footer
     $wp_customize->add_setting( 'rcg_footer_description', array(
-        'default'           => 'Agence conseil de reference specialisee dans la communication institutionnelle en Afrique de l\'Ouest.',
+        'default'           => 'Premiere agence africaine de communication institutionnelle, politique et sociale. Conseil strategique, relations publiques et branding au service des decideurs en Afrique de l\'Ouest.',
         'sanitize_callback' => 'sanitize_textarea_field',
     ) );
     $wp_customize->add_control( 'rcg_footer_description', array(
@@ -72,7 +72,7 @@ function rcg_customize_register( $wp_customize ) {
 
     // Copyright
     $wp_customize->add_setting( 'rcg_footer_copyright', array(
-        'default'           => '&copy; ' . date( 'Y' ) . ' RCG West Africa. Tous droits reserves.',
+        'default'           => '&copy; ' . wp_date( 'Y' ) . ' RCG West Africa. Tous droits reserves.',
         'sanitize_callback' => 'wp_kses_post',
     ) );
     $wp_customize->add_control( 'rcg_footer_copyright', array(
@@ -83,7 +83,7 @@ function rcg_customize_register( $wp_customize ) {
 
     // Texte newsletter
     $wp_customize->add_setting( 'rcg_newsletter_text', array(
-        'default'           => 'Recevez nos analyses strategiques sur la region.',
+        'default'           => 'Recevez nos analyses et insights sur la communication institutionnelle en Afrique.',
         'sanitize_callback' => 'sanitize_text_field',
     ) );
     $wp_customize->add_control( 'rcg_newsletter_text', array(

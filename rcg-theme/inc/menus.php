@@ -32,23 +32,16 @@ class RCG_Nav_Walker extends Walker_Nav_Menu {
             $link_classes .= ' text-primary';
         }
 
-        $atts = array(
-            'href'  => ! empty( $item->url ) ? $item->url : '',
-            'class' => $link_classes,
-        );
+        $href = ! empty( $item->url ) ? esc_url( $item->url ) : '';
 
+        $output .= '<a href="' . $href . '" class="' . esc_attr( $link_classes ) . '"';
         if ( ! empty( $item->target ) ) {
-            $atts['target'] = $item->target;
-        }
-
-        $attributes = '';
-        foreach ( $atts as $attr => $value ) {
-            if ( ! empty( $value ) ) {
-                $attributes .= ' ' . $attr . '="' . esc_attr( $value ) . '"';
+            $output .= ' target="' . esc_attr( $item->target ) . '"';
+            if ( '_blank' === $item->target ) {
+                $output .= ' rel="noopener noreferrer"';
             }
         }
-
-        $output .= '<a' . $attributes . '>';
+        $output .= '>';
         $output .= esc_html( $item->title );
         $output .= '</a>';
     }
@@ -75,21 +68,10 @@ class RCG_Nav_Walker extends Walker_Nav_Menu {
 class RCG_Footer_Walker extends Walker_Nav_Menu {
 
     public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $href = ! empty( $item->url ) ? esc_url( $item->url ) : '';
+
         $output .= '<li>';
-
-        $atts = array(
-            'href'  => ! empty( $item->url ) ? $item->url : '',
-            'class' => 'hover:text-primary transition-colors',
-        );
-
-        $attributes = '';
-        foreach ( $atts as $attr => $value ) {
-            if ( ! empty( $value ) ) {
-                $attributes .= ' ' . $attr . '="' . esc_attr( $value ) . '"';
-            }
-        }
-
-        $output .= '<a' . $attributes . '>';
+        $output .= '<a href="' . $href . '" class="hover:text-primary transition-colors">';
         $output .= esc_html( $item->title );
         $output .= '</a>';
     }
@@ -113,19 +95,9 @@ class RCG_Footer_Walker extends Walker_Nav_Menu {
 class RCG_Legal_Walker extends Walker_Nav_Menu {
 
     public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-        $atts = array(
-            'href'  => ! empty( $item->url ) ? $item->url : '',
-            'class' => 'hover:text-white transition-colors',
-        );
+        $href = ! empty( $item->url ) ? esc_url( $item->url ) : '';
 
-        $attributes = '';
-        foreach ( $atts as $attr => $value ) {
-            if ( ! empty( $value ) ) {
-                $attributes .= ' ' . $attr . '="' . esc_attr( $value ) . '"';
-            }
-        }
-
-        $output .= '<a' . $attributes . '>';
+        $output .= '<a href="' . $href . '" class="hover:text-white transition-colors">';
         $output .= esc_html( $item->title );
         $output .= '</a>';
     }

@@ -9,12 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$label = rcg_get_field( 'why_label', false, 'Pourquoi RCG ?' );
-$title = rcg_get_field( 'why_title', false, "L'excellence operationnelle au coeur de notre demarche" );
+$label = rcg_get_field( 'why_label', false, 'Pourquoi choisir RCG ?' );
+$title = rcg_get_field( 'why_title', false, "L'excellence operationnelle au service des decideurs africains" );
 
 $cta_text       = get_theme_mod( 'rcg_cta_text', 'Travaillons ensemble sur vos enjeux.' );
 $cta_button     = get_theme_mod( 'rcg_cta_button_text', 'Demarrer un projet' );
-$cta_url        = get_theme_mod( 'rcg_cta_button_url', '#' );
+$cta_default    = get_permalink( get_page_by_path( 'contact' ) ) ?: home_url( '/contact/' );
+$cta_url        = get_theme_mod( 'rcg_cta_button_url', $cta_default );
 ?>
 
 <section class="bg-surface-dark py-24 text-white">
@@ -42,7 +43,7 @@ $cta_url        = get_theme_mod( 'rcg_cta_button_url', '#' );
                 endwhile;
             else :
                 // Fallback statique
-                $values = array( 'Reactivite', 'Intelligence', 'Terrain', 'Execution' );
+                $values = array( 'Reactivite & Disponibilite', 'Intelligence Strategique', 'Ancrage Terrain en Afrique de l\'Ouest', 'Excellence d\'Execution' );
                 foreach ( $values as $value ) :
                     ?>
                     <div class="flex items-center justify-between border-b border-white/10 pb-6 group cursor-default">

@@ -15,16 +15,16 @@ get_header();
 // === Donnees ACF ===
 $hero_img     = get_field( 'ins_hero_image' );
 $hero_url     = $hero_img ? $hero_img['url'] : get_template_directory_uri() . '/assets/images/insights-hero.png';
-$hero_eyebrow = get_field( 'ins_hero_eyebrow' ) ?: 'Analyse Stratégique';
+$hero_eyebrow = get_field( 'ins_hero_eyebrow' ) ?: 'Analyse & Décryptage';
 
 // Ticker
 $ticker_items = get_field( 'ins_ticker' );
 if ( ! $ticker_items ) {
     $ticker_items = array(
-        array( 'text' => 'Analyse : L\'économie politique de la communication au Sahel 2025' ),
-        array( 'text' => 'Tendance : Le Personal Branding des dirigeants africains en 2026' ),
-        array( 'text' => 'Rapport : Relations presse & Intelligence artificielle en Afrique' ),
-        array( 'text' => 'Opinion : Crise de confiance médiatique en UEMOA — état des lieux' ),
+        array( 'text' => 'Analyse : Communication institutionnelle et gouvernance en Afrique de l\'Ouest — Enjeux 2026' ),
+        array( 'text' => 'Tendance : Personal Branding des dirigeants africains — Stratégies et bonnes pratiques' ),
+        array( 'text' => 'Rapport : Relations presse & médias en zone CEDEAO — Panorama annuel RCG' ),
+        array( 'text' => 'Opinion : Gestion de crise et réputation institutionnelle en UEMOA — Décryptage RCG West Africa' ),
     );
 }
 
@@ -32,16 +32,16 @@ if ( ! $ticker_items ) {
 $dossiers = get_field( 'ins_dossiers' );
 if ( ! $dossiers ) {
     $dossiers = array(
-        array( 'icon' => 'psychology',    'title' => 'Personal Branding',  'count' => '7 articles', 'bg' => 'dark', 'link' => '' ),
-        array( 'icon' => 'crisis_alert',  'title' => 'Com. de Crise',     'count' => '5 articles', 'bg' => 'red',  'link' => '' ),
-        array( 'icon' => 'newspaper',     'title' => 'Relations Médias',   'count' => '9 articles', 'bg' => 'dark', 'link' => '' ),
-        array( 'icon' => 'public',        'title' => 'Géopolitique',       'count' => '4 articles', 'bg' => 'dark', 'link' => '' ),
+        array( 'icon' => 'psychology',    'title' => 'Personal Branding',       'count' => '7 articles', 'bg' => 'dark', 'link' => '' ),
+        array( 'icon' => 'crisis_alert',  'title' => 'Communication de Crise',  'count' => '5 articles', 'bg' => 'red',  'link' => '' ),
+        array( 'icon' => 'newspaper',     'title' => 'Relations Presse & RP',   'count' => '9 articles', 'bg' => 'dark', 'link' => '' ),
+        array( 'icon' => 'public',        'title' => 'Institutions & CEDEAO',   'count' => '4 articles', 'bg' => 'dark', 'link' => '' ),
     );
 }
 
 // Newsletter
 $nl_title = get_field( 'ins_nl_title' ) ?: 'Ne manquez aucune analyse stratégique.';
-$nl_desc  = get_field( 'ins_nl_desc' ) ?: 'La lettre mensuelle RCG Insights : analyses exclusives, décryptages de l\'actualité institutionnelle ouest-africaine et perspectives des experts de l\'agence.';
+$nl_desc  = get_field( 'ins_nl_desc' ) ?: 'La lettre mensuelle RCG Intelligence : analyses exclusives sur la communication institutionnelle en Afrique de l\'Ouest, décryptages des enjeux CEDEAO et perspectives des experts de RCG West Africa depuis Abidjan.';
 
 // Filtre categories
 $filter_cats = array(
@@ -154,16 +154,16 @@ $bg_map = array(
                     <span class="read-time">8 min de lecture</span>
                 </div>
                 <h1 class="font-black text-4xl lg:text-[60px] uppercase leading-[1.05] mb-6 tracking-tight">
-                    L'ère du dirigeant visible : enjeux et <span class="text-primary">stratégie</span> en Afrique de l'Ouest
+                    Communication institutionnelle : enjeux et <span class="text-primary">stratégie</span> en Afrique de l'Ouest
                 </h1>
                 <div class="line-accent mb-6"></div>
-                <p class="text-white/60 text-lg leading-relaxed mb-8 font-light max-w-xl">À l'heure où les réseaux sociaux bouleversent les codes de la communication institutionnelle, la visibilité des dirigeants africains devient un enjeu stratégique majeur. Analyse.</p>
+                <p class="text-white/60 text-lg leading-relaxed mb-8 font-light max-w-xl">De la CEDEAO aux grandes entreprises ouest-africaines, la communication institutionnelle se réinvente. Décryptage des nouvelles stratégies par les experts de RCG West Africa.</p>
                 <div class="flex items-center gap-6">
                     <span class="feature-link">Lire l'article complet <span class="material-symbols-outlined text-base">arrow_forward</span></span>
                     <div class="h-4 w-[1px] bg-white/20"></div>
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-[9px] font-bold">SA</div>
-                        <span class="text-white/50 text-xs">par <strong class="text-white/80">Sylvie Anoma Koffi</strong></span>
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-[9px] font-bold">IK</div>
+                        <span class="text-white/50 text-xs">par <strong class="text-white/80">Ibrahim KOUROUMA</strong></span>
                     </div>
                 </div>
             <?php endif; ?>
@@ -354,36 +354,36 @@ $bg_map = array(
                 $fallback_articles = array(
                     array(
                         'type' => 'standard', 'bg' => 'bg-surface-dark text-white', 'span' => ' lg:col-span-2', 'img_h' => 'h-72 lg:h-[420px]',
-                        'img' => 'insights-leaders.png', 'cat' => 'Leadership', 'cat_slug' => 'leadership', 'cat_class' => 'text-primary border-primary/40',
-                        'date' => 'Février 2026', 'read' => '12', 'title' => 'Gouvernance & Communication : Le nouveau paradigme des décideurs de la zone UEMOA',
-                        'excerpt' => 'Comment les institutions de la CEDEAO repensent leur approche communicationnelle face aux exigences croissantes des citoyens et des partenaires internationaux.',
-                        'initials' => 'KM', 'author' => 'Kofi Mensah', 'dark' => true, 'num' => '01',
+                        'img' => 'insights-leaders.png', 'cat' => 'Stratégie', 'cat_slug' => 'strategie', 'cat_class' => 'text-primary border-primary/40',
+                        'date' => 'Mars 2026', 'read' => '12', 'title' => 'Gouvernance & Communication Institutionnelle : Le nouveau paradigme des décideurs en zone CEDEAO',
+                        'excerpt' => 'Comment les institutions ouest-africaines — CEDEAO, BAD, UEMOA — repensent leur stratégie de communication face aux exigences des citoyens et partenaires internationaux. Analyse RCG West Africa.',
+                        'initials' => 'IK', 'author' => 'Ibrahim KOUROUMA', 'dark' => true, 'num' => '01',
                     ),
                     array(
                         'type' => 'standard', 'bg' => 'bg-[#f4f4f4]', 'span' => '', 'img_h' => 'h-52',
                         'img' => 'insights-journaliste.png', 'cat' => 'Médias & RP', 'cat_slug' => 'medias', 'cat_class' => 'text-white bg-background-dark/60 border-transparent backdrop-blur-sm',
-                        'date' => 'Janvier 2026', 'read' => '6', 'title' => 'Relations Presse en Afrique : La révolution silencieuse des journalistes indépendants',
-                        'excerpt' => 'Le nouveau paysage médiatique africain impose aux communicants de repenser entièrement leurs stratégies de RP.',
-                        'initials' => 'AC', 'author' => 'Aya Coulibaly', 'dark' => false, 'num' => '',
+                        'date' => 'Février 2026', 'read' => '6', 'title' => 'Relations Presse en Afrique de l\'Ouest : Stratégies RP pour institutions et entreprises',
+                        'excerpt' => 'Le paysage médiatique ouest-africain évolue rapidement. Décryptage des nouvelles approches de relations presse efficaces en Côte d\'Ivoire et dans la sous-région.',
+                        'initials' => 'RCG', 'author' => 'Équipe RCG', 'dark' => false, 'num' => '',
                     ),
                     array(
                         'type' => 'standard', 'bg' => 'bg-surface-dark text-white', 'span' => '', 'img_h' => 'h-52',
                         'img' => 'insights-crise.png', 'cat' => 'Crise', 'cat_slug' => 'crise', 'cat_class' => 'text-primary border-primary/40',
-                        'date' => 'Décembre 2025', 'read' => '10', 'title' => 'Cell. de Crise 3.0 : L\'IA comme co-stratège en situation d\'urgence',
-                        'excerpt' => 'Les nouvelles technologies transforment la gestion de crise : opportunités et dangers pour les institutions africaines.',
-                        'initials' => 'MA', 'author' => 'Marcus Adjei', 'dark' => true, 'num' => '',
+                        'date' => 'Janvier 2026', 'read' => '10', 'title' => 'Communication de Crise en Afrique : Anticiper, Réagir, Protéger la réputation',
+                        'excerpt' => 'De la cellule de crise traditionnelle au dispositif digital : comment les organisations africaines modernisent leur gestion de crise réputationnelle.',
+                        'initials' => 'RCG', 'author' => 'Pôle Conseil RCG', 'dark' => true, 'num' => '',
                     ),
                     array(
                         'type' => 'opinion', 'cat' => 'Opinion', 'cat_slug' => 'opinions',
-                        'date' => 'Nov. 2025', 'title' => 'La discrétion stratégique reste le premier luxe du communicant institutionnel africain.',
-                        'excerpt' => 'Dans un monde sursaturé de visibilité, choisir quand se taire devient un acte de stratège. Réflexion sur le paradoxe de la communication institutionnelle discrète.',
-                        'initials' => 'SAK', 'author' => 'Sylvie Anoma Koffi', 'auth_title' => 'Fondatrice, RCG',
+                        'date' => 'Déc. 2025', 'title' => 'La discrétion stratégique reste le premier atout du communicant institutionnel en Afrique de l\'Ouest.',
+                        'excerpt' => 'Dans un monde sursaturé de visibilité, savoir quand et comment communiquer devient un avantage stratégique. Réflexion sur le conseil en communication institutionnelle en zone CEDEAO.',
+                        'initials' => 'IK', 'author' => 'Ibrahim KOUROUMA', 'auth_title' => 'Fondateur & DG, RCG West Africa',
                     ),
                     array(
                         'type' => 'rapport', 'cat' => 'Rapport', 'cat_slug' => 'strategie',
-                        'date' => 'Oct. 2025', 'stat' => '73', 'stat_unit' => '%', 'stat_label' => 'des dirigeants africains interrogés',
-                        'title' => 'Baromètre 2025 de la Communication Institutionnelle en Afrique de l\'Ouest',
-                        'excerpt' => 'Résultats exclusifs de notre étude annuelle sur l\'état des pratiques et perceptions de la communication institutionnelle dans 7 pays de la région.',
+                        'date' => 'Nov. 2025', 'stat' => '73', 'stat_unit' => '%', 'stat_label' => 'des dirigeants ouest-africains interrogés',
+                        'title' => 'Baromètre 2025 de la Communication Institutionnelle en Afrique de l\'Ouest — CEDEAO',
+                        'excerpt' => 'Résultats exclusifs de notre étude sur les pratiques de communication institutionnelle dans 10 pays d\'Afrique de l\'Ouest : Côte d\'Ivoire, Sénégal, Ghana, Guinée, Mali et plus.',
                         'pages' => '48 pages',
                     ),
                 );
@@ -526,7 +526,7 @@ $bg_map = array(
                 <p class="text-white/60 text-sm leading-relaxed max-w-md"><?php echo esc_html( $nl_desc ); ?></p>
                 <div class="mt-6 space-y-3">
                     <?php
-                    $checks = array( '1 édition par mois', 'Analyses exclusives', 'Données confidentielles' );
+                    $checks = array( '1 édition par mois depuis Abidjan', 'Analyses exclusives sur la zone CEDEAO', 'Décryptages et données sectorielles' );
                     foreach ( $checks as $check ) :
                     ?>
                         <div class="flex items-center gap-2">

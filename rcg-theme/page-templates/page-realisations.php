@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // === Donnees ACF (avec fallbacks) ===
-$eyebrow    = get_field( 'real_page_eyebrow' ) ?: 'Preuves d\'Impact';
-$hero_title = get_field( 'real_page_title' ) ?: 'Des résultats qui parlent d\'eux-mêmes.';
-$hero_desc  = get_field( 'real_page_desc' ) ?: 'Gouvernements, institutions internationales, entreprises panafricaines : découvrez les missions qui ont transformé les perceptions et bâti des réputations.';
+$eyebrow    = get_field( 'real_page_eyebrow' ) ?: 'Etudes de Cas & Realisations';
+$hero_title = get_field( 'real_page_title' ) ?: 'Des missions strategiques, des resultats concrets.';
+$hero_desc  = get_field( 'real_page_desc' ) ?: 'CEDEAO, BAD, gouvernements, entreprises leaders : decouvrez comment RCG West Africa a accompagne ses clients en conseil strategique, communication de crise, relations publiques et evenementiel institutionnel en Afrique de l\'Ouest.';
 $hero_img   = get_field( 'real_page_hero_image' );
 $hero_url   = $hero_img ? $hero_img['url'] : get_template_directory_uri() . '/assets/images/real-header-hero.png';
 
@@ -23,29 +23,29 @@ $hero_url   = $hero_img ? $hero_img['url'] : get_template_directory_uri() . '/as
 $stats = get_field( 'real_page_stats' );
 if ( ! $stats ) {
     $stats = array(
-        array( 'value' => '120+', 'label' => 'Missions accomplies', 'highlight' => true ),
-        array( 'value' => '15',   'label' => 'Pays d\'intervention', 'highlight' => false ),
-        array( 'value' => '98%',  'label' => 'Objectifs atteints',   'highlight' => false ),
-        array( 'value' => '18',   'label' => 'Années d\'expertise',  'highlight' => false ),
+        array( 'value' => '100+', 'label' => 'Missions strategiques realisees', 'highlight' => true ),
+        array( 'value' => '10+',  'label' => 'Pays d\'intervention en Afrique', 'highlight' => false ),
+        array( 'value' => '50+',  'label' => 'Clients institutionnels & prives', 'highlight' => false ),
+        array( 'value' => '15+',  'label' => 'Annees d\'expertise terrain',     'highlight' => false ),
     );
 }
 
 // Quote
-$quote        = get_field( 'real_page_quote' ) ?: 'Nous ne mesurons pas notre succès en titres de presse. Nous le mesurons en décisions politiques, en contrats signés et en réputations préservées.';
-$quote_author = get_field( 'real_page_quote_author' ) ?: 'Direction Générale — RCG West Africa';
+$quote        = get_field( 'real_page_quote' ) ?: 'Nous ne mesurons pas notre succes en titres de presse. Nous le mesurons en decisions prises, en reputations preservees et en objectifs atteints par nos clients.';
+$quote_author = get_field( 'real_page_quote_author' ) ?: 'Ibrahim KOUROUMA — Fondateur & Directeur General, RCG West Africa';
 
 // Secteurs
-$secteurs_title = get_field( 'real_page_secteurs_title' ) ?: 'Une expertise transversale, des résultats ciblés';
-$secteurs_desc  = get_field( 'real_page_secteurs_desc' ) ?: 'RCG intervient dans des environnements complexes où la communication est un levier de pouvoir. Chaque secteur bénéficie d\'une approche sur mesure.';
+$secteurs_title = get_field( 'real_page_secteurs_title' ) ?: 'Des secteurs strategiques, une approche sur mesure';
+$secteurs_desc  = get_field( 'real_page_secteurs_desc' ) ?: 'RCG West Africa intervient aupres d\'institutions, gouvernements, organisations internationales et entreprises du secteur prive en Afrique de l\'Ouest. Chaque secteur beneficie d\'une strategie de communication adaptee.';
 $secteurs       = get_field( 'real_page_secteurs' );
 if ( ! $secteurs ) {
     $secteurs = array(
-        array( 'icon' => 'account_balance',   'label' => 'Institutions Publiques' ),
-        array( 'icon' => 'public',            'label' => 'Org. Internationales' ),
-        array( 'icon' => 'corporate_fare',    'label' => 'Entreprises Privées' ),
-        array( 'icon' => 'handshake',         'label' => 'Diplomatie' ),
-        array( 'icon' => 'health_and_safety', 'label' => 'Santé Publique' ),
-        array( 'icon' => 'factory',           'label' => 'Industrie & Mines' ),
+        array( 'icon' => 'account_balance',   'label' => 'Gouvernements & Institutions' ),
+        array( 'icon' => 'public',            'label' => 'CEDEAO & Org. Internationales' ),
+        array( 'icon' => 'corporate_fare',    'label' => 'Entreprises & Secteur Prive' ),
+        array( 'icon' => 'event',             'label' => 'Sommets & Conferences' ),
+        array( 'icon' => 'shield',            'label' => 'Communication de Crise' ),
+        array( 'icon' => 'trending_up',       'label' => 'Finance & Assurances' ),
     );
 }
 
@@ -53,30 +53,30 @@ if ( ! $secteurs ) {
 $timeline = get_field( 'real_page_timeline' );
 if ( ! $timeline ) {
     $timeline = array(
-        array( 'year' => '2006', 'title' => 'Fondation à Abidjan',    'description' => 'Création de RCG avec une vision claire : professionnaliser la communication institutionnelle en Afrique de l\'Ouest.', 'is_current' => false ),
-        array( 'year' => '2012', 'title' => 'Expansion Régionale',    'description' => 'Ouverture du bureau de Paris et extension à 8 nouveaux pays de la sous-région.', 'is_current' => false ),
-        array( 'year' => '2018', 'title' => '100ème Mission',         'description' => 'Cap symbolique franchi avec des clients dans 12 pays et 3 langues de travail.', 'is_current' => false ),
-        array( 'year' => '2026', 'title' => 'Leader Incontesté',      'description' => '18 ans d\'expertise, 120+ missions réussies, et un réseau inégalé en Afrique de l\'Ouest.', 'is_current' => true ),
+        array( 'year' => 'Fondation', 'title' => 'Creation a Abidjan',    'description' => 'RCG West Africa nait avec la conviction de professionnaliser la communication institutionnelle en Afrique de l\'Ouest.', 'is_current' => false ),
+        array( 'year' => 'Croissance', 'title' => 'Mandats Institutionnels Majeurs', 'description' => 'Premiers mandats gouvernementaux et institutionnels d\'envergure. Confiance de la CEDEAO, BAD (AFAWA) et entreprises leaders.', 'is_current' => false ),
+        array( 'year' => 'Expansion', 'title' => 'Rayonnement Panafricain', 'description' => 'Extension des operations dans plus de 10 pays d\'Afrique de l\'Ouest. Portefeuille clients diversifie : AfSBT, Africaine des Assurances, Green Finance Conference.', 'is_current' => false ),
+        array( 'year' => '2025', 'title' => 'Reference Regionale',   'description' => '15+ ans d\'expertise, 100+ missions strategiques et un reseau inegale en communication institutionnelle en Afrique de l\'Ouest.', 'is_current' => true ),
     );
 }
 
 $exp_list = get_field( 'real_page_expertises_list' );
 if ( ! $exp_list ) {
     $exp_list = array(
-        array( 'label' => 'Communication Gouvernementale' ),
-        array( 'label' => 'Gestion de Crise & Réputation' ),
-        array( 'label' => 'Relations Presse Panafricaines' ),
-        array( 'label' => 'Branding Institutionnel' ),
-        array( 'label' => 'Stratégie Éditoriale & Contenus' ),
+        array( 'label' => 'Conseil Strategique & Communication Institutionnelle' ),
+        array( 'label' => 'Communication de Crise & Gestion de Reputation' ),
+        array( 'label' => 'Relations Publiques & Relations Presse' ),
+        array( 'label' => 'Branding Institutionnel & Evenementiel' ),
+        array( 'label' => 'Creation de Contenus & Digital' ),
     );
 }
 $callout_value = get_field( 'real_page_callout_value' ) ?: '48h';
 $callout_text  = get_field( 'real_page_callout_text' ) ?: 'Délai max d\'activation d\'une cellule de crise';
 
 // CTA
-$cta_title = get_field( 'real_page_cta_title' ) ?: 'Votre mission sera notre prochaine réalisation.';
-$cta_desc  = get_field( 'real_page_cta_desc' ) ?: 'Contactez-nous pour discuter de votre projet et bâtir ensemble votre succès.';
-$cta_btn   = get_field( 'real_page_cta_btn' ) ?: 'Démarrer votre projet';
+$cta_title = get_field( 'real_page_cta_title' ) ?: 'Votre enjeu de communication merite une strategie sur mesure.';
+$cta_desc  = get_field( 'real_page_cta_desc' ) ?: 'Conseil strategique, communication de crise, relations publiques ou evenementiel : contactez RCG West Africa a Abidjan pour discuter de votre projet.';
+$cta_btn   = get_field( 'real_page_cta_btn' ) ?: 'Contactez RCG';
 
 // Contact URL
 $contact_page = get_page_by_path( 'contact' );
@@ -269,8 +269,8 @@ $has_featured = $featured_query->have_posts();
                         <span class="tag-pill text-primary border-primary/40">Institution Publique</span>
                         <span class="tag-pill text-white/40 border-white/20">Côte d'Ivoire</span>
                     </div>
-                    <h3 class="text-2xl lg:text-3xl font-black uppercase tracking-tight leading-tight">Stratégie de Communication Nationale — Ministère de l'Économie</h3>
-                    <p class="text-white/60 mt-4 text-sm leading-relaxed">Redéfinition complète du narratif économique pour rassurer les bailleurs de fonds internationaux suite à un contexte inflationniste mondial. Une opération coup de poing sur 8 semaines couvrant 4 pays simultanément.</p>
+                    <h3 class="text-2xl lg:text-3xl font-black uppercase tracking-tight leading-tight">Strategie de Communication Institutionnelle — Agence Gouvernementale</h3>
+                    <p class="text-white/60 mt-4 text-sm leading-relaxed">Repositionnement strategique et refonte du narratif institutionnel pour renforcer la credibilite aupres des partenaires internationaux. Deploiement d'un plan de communication integre sur 8 semaines couvrant relations presse, evenementiel et strategie editoriale.</p>
                     <div class="grid grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/10">
                         <div>
                             <div class="text-2xl font-black text-primary">+65%</div>
@@ -522,10 +522,10 @@ $has_featured = $featured_query->have_posts();
             </div>
             <!-- Encart rouge -->
             <div class="bg-primary text-white p-8 flex flex-col justify-center">
-                <p class="font-lora italic text-sm text-white/80 leading-relaxed">"Chaque secteur a ses codes, ses enjeux et ses publics. Notre force : les maîtriser tous."</p>
+                <p class="font-lora italic text-sm text-white/80 leading-relaxed">"Chaque secteur a ses codes, ses enjeux et ses publics. Notre force : les maitriser en Afrique de l'Ouest."</p>
                 <div class="mt-6 pt-4 border-t border-white/20">
-                    <span class="text-3xl font-black">15</span>
-                    <span class="text-[10px] uppercase tracking-widest text-white/60 ml-2">Pays couverts</span>
+                    <span class="text-3xl font-black">10+</span>
+                    <span class="text-[10px] uppercase tracking-widest text-white/60 ml-2">Pays couverts en Afrique</span>
                 </div>
             </div>
         </div>
@@ -549,11 +549,11 @@ $has_featured = $featured_query->have_posts();
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative">
 
         <!-- Decoratif "18" -->
-        <div class="absolute -top-20 right-0 text-[300px] lg:text-[400px] font-black text-white/5 leading-none select-none pointer-events-none">18</div>
+        <div class="absolute -top-20 right-0 text-[300px] lg:text-[400px] font-black text-white/5 leading-none select-none pointer-events-none">15+</div>
 
         <div class="relative z-10">
             <span class="eyebrow mb-4"><?php esc_html_e( 'Histoire & Impact', 'rcg' ); ?></span>
-            <h2 class="text-3xl lg:text-5xl font-black uppercase tracking-tight mt-2 mb-16"><?php esc_html_e( '18 ans d\'excellence', 'rcg' ); ?></h2>
+            <h2 class="text-3xl lg:text-5xl font-black uppercase tracking-tight mt-2 mb-16"><?php esc_html_e( '15+ ans d\'excellence en communication', 'rcg' ); ?></h2>
 
             <div class="grid lg:grid-cols-2 gap-16">
                 <!-- Timeline gauche -->
