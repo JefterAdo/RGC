@@ -14,9 +14,9 @@ $title = rcg_get_field( 'pos_title', false, 'Premiere agence africaine de consei
 ?>
 
 <section class="bg-white py-24 relative overflow-hidden">
-    <div class="absolute left-0 top-0 text-[30rem] font-black text-black/[0.03] leading-none select-none -translate-x-1/4 -translate-y-1/4">02</div>
+    <div class="absolute left-0 top-0 text-[10rem] lg:text-[30rem] font-black text-black/[0.03] leading-none select-none -translate-x-1/4 -translate-y-1/4">02</div>
 
-    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 relative z-10">
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 relative z-10">
         <!-- Titre -->
         <div class="flex flex-col space-y-6">
             <span class="text-primary font-bold text-sm tracking-widest uppercase">&mdash; <?php echo esc_html( $label ); ?></span>
@@ -26,7 +26,7 @@ $title = rcg_get_field( 'pos_title', false, 'Premiere agence africaine de consei
         </div>
 
         <!-- Cartes -->
-        <div class="grid grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <?php
             if ( function_exists( 'have_rows' ) && have_rows( 'pos_cards' ) ) :
                 while ( have_rows( 'pos_cards' ) ) :

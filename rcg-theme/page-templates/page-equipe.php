@@ -86,22 +86,22 @@ $contact_url = get_permalink( get_page_by_path( 'contact' ) ) ?: '#';
      ============================================ -->
 <header class="relative bg-background-dark text-white overflow-hidden" style="min-height:80vh">
     <div class="absolute inset-0 z-0">
-        <img src="<?php echo esc_url( $hero_url ); ?>" alt="<?php esc_attr_e( 'Équipe RCG West Africa', 'rcg' ); ?>" class="w-full h-full object-cover object-top opacity-40">
+        <img src="<?php echo esc_url( $hero_url ); ?>" alt="<?php esc_attr_e( 'Équipe RCG West Africa', 'rcg' ); ?>" class="w-full h-full object-cover object-top opacity-40" loading="eager" fetchpriority="high" decoding="async">
         <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
     </div>
 
-    <div class="absolute top-0 right-0 w-[300px] h-[300px] bg-primary opacity-10 -translate-y-1/2 translate-x-1/2 rotate-45 z-0"></div>
+    <div class="absolute top-0 right-0 w-[150px] h-[150px] lg:w-[300px] lg:h-[300px] bg-primary opacity-10 -translate-y-1/2 translate-x-1/2 rotate-45 z-0"></div>
 
     <div class="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col justify-center h-full pt-20 pb-24" style="min-height:80vh">
         <div class="max-w-3xl">
             <span class="eyebrow mb-6"><?php echo esc_html( $hero_eyebrow ); ?></span>
             <?php if ( $hero_title ) : ?>
-                <h1 class="font-black text-5xl lg:text-[76px] uppercase leading-[1.05] mb-8 tracking-tight">
+                <h1 class="font-black text-3xl md:text-5xl lg:text-[76px] uppercase leading-[1.05] mb-8 tracking-tight">
                     <?php echo wp_kses_post( $hero_title ); ?>
                 </h1>
             <?php else : ?>
-                <h1 class="font-black text-5xl lg:text-[76px] uppercase leading-[1.05] mb-8 tracking-tight">
+                <h1 class="font-black text-3xl md:text-5xl lg:text-[76px] uppercase leading-[1.05] mb-8 tracking-tight">
                     Des <span class="text-primary">experts</span><br>
                     au service<br>
                     de votre influence.
@@ -113,7 +113,7 @@ $contact_url = get_permalink( get_page_by_path( 'contact' ) ) ?: '#';
             </p>
         </div>
 
-        <div class="flex flex-wrap gap-12 mt-16 pt-8 border-t border-white/10">
+        <div class="flex flex-wrap gap-6 lg:gap-12 mt-12 lg:mt-16 pt-8 border-t border-white/10">
             <?php foreach ( $hero_stats as $stat ) : ?>
                 <div>
                     <div class="font-black text-4xl text-white"><?php echo esc_html( $stat['value'] ); ?><span class="text-primary"><?php echo esc_html( $stat['suffix'] ); ?></span></div>
@@ -169,9 +169,9 @@ $has_direction   = $direction_query->have_posts();
                 $thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'large' );
                 ?>
                 <div class="grid lg:grid-cols-2 gap-0 reveal mb-12 last:mb-0">
-                    <div class="relative h-[600px] lg:h-auto overflow-hidden group">
+                    <div class="relative h-[350px] lg:h-auto overflow-hidden group">
                         <?php if ( $thumb_url ) : ?>
-                            <img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105">
+                            <img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105" loading="lazy" decoding="async">
                         <?php endif; ?>
                         <div class="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 h-1 w-full bg-primary"></div>
@@ -216,8 +216,8 @@ $has_direction   = $direction_query->have_posts();
         <?php else : ?>
             <!-- Fallback statique : Fondateur -->
             <div class="grid lg:grid-cols-2 gap-0 reveal">
-                <div class="relative h-[600px] lg:h-auto overflow-hidden group">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/equipe-direction.png" alt="Ibrahim KOUROUMA - Fondateur RCG West Africa" class="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105">
+                <div class="relative h-[350px] lg:h-auto overflow-hidden group">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/equipe-direction.png" alt="Ibrahim KOUROUMA - Fondateur RCG West Africa" class="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 h-1 w-full bg-primary"></div>
                 </div>
@@ -315,9 +315,9 @@ $fallback_seniors = array(
                     $linkedin  = get_field( 'membre_linkedin' );
                     $thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'large' );
                     ?>
-                    <div class="member-card h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $delay * 0.1 ); ?>s">
+                    <div class="member-card h-[400px] lg:h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $delay * 0.1 ); ?>s">
                         <?php if ( $thumb_url ) : ?>
-                            <img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover object-top absolute inset-0">
+                            <img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover object-top absolute inset-0" loading="lazy" decoding="async">
                         <?php endif; ?>
                         <div class="member-overlay"></div>
                         <div class="absolute inset-0 flex flex-col justify-end p-8 z-10">
@@ -349,8 +349,8 @@ $fallback_seniors = array(
             <?php else : ?>
                 <!-- Fallback statique -->
                 <?php foreach ( $fallback_seniors as $member ) : ?>
-                    <div class="member-card h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $member['delay'] ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $member['img'] ); ?>" alt="<?php echo esc_attr( $member['name'] ); ?>" class="w-full h-full object-cover object-top absolute inset-0">
+                    <div class="member-card h-[400px] lg:h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $member['delay'] ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $member['img'] ); ?>" alt="<?php echo esc_attr( $member['name'] ); ?>" class="w-full h-full object-cover object-top absolute inset-0" loading="lazy" decoding="async">
                         <div class="member-overlay"></div>
                         <div class="absolute inset-0 flex flex-col justify-end p-8 z-10">
                             <span class="text-primary font-bold text-[9px] tracking-[2.5px] uppercase mb-3"><?php echo esc_html( $member['poste'] ); ?></span>
@@ -382,7 +382,7 @@ $fallback_seniors = array(
         <div class="section-sep">
             <span class="eyebrow">— Pôles Opérationnels</span>
         </div>
-        <div class="grid lg:grid-cols-2 gap-16">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16">
 
             <!-- Liste des poles -->
             <div class="space-y-0">

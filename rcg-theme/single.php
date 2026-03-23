@@ -78,7 +78,7 @@ while ( have_posts() ) :
     <div class="bg-surface-dark py-12">
         <div class="container mx-auto px-6 lg:px-12 max-w-4xl flex flex-col md:flex-row items-center gap-8">
             <div class="text-center md:text-left">
-                <div class="font-black text-5xl text-primary"><?php echo esc_html( $stat_value ); ?></div>
+                <div class="font-black text-3xl lg:text-5xl text-primary"><?php echo esc_html( $stat_value ); ?></div>
                 <?php if ( $stat_label ) : ?>
                     <div class="text-white/50 text-sm mt-2"><?php echo esc_html( $stat_label ); ?></div>
                 <?php endif; ?>
@@ -103,7 +103,7 @@ while ( have_posts() ) :
 <?php if ( has_post_thumbnail() ) : ?>
     <div class="bg-surface-dark py-8">
         <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
-            <?php the_post_thumbnail( 'hero-large', array( 'class' => 'w-full h-auto max-h-[500px] object-cover' ) ); ?>
+            <?php the_post_thumbnail( 'hero-large', array( 'class' => 'w-full h-auto max-h-[300px] lg:max-h-[500px] object-cover' ) ); ?>
         </div>
     </div>
 <?php endif; ?>

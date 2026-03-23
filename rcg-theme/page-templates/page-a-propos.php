@@ -156,7 +156,7 @@ $anchors = array(
      ============================================ -->
 <header class="relative bg-background-dark text-white overflow-hidden" style="min-height:75vh">
     <!-- Image de fond -->
-    <img src="<?php echo esc_url( $hero_url ); ?>" alt="<?php echo esc_attr( $hero_title ); ?>" class="hero-img absolute inset-0 w-full h-full object-cover opacity-35 object-top">
+    <img src="<?php echo esc_url( $hero_url ); ?>" alt="<?php echo esc_attr( $hero_title ); ?>" class="hero-img absolute inset-0 w-full h-full object-cover opacity-35 object-top" loading="eager" fetchpriority="high" decoding="async">
 
     <!-- Gradient overlays -->
     <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-background-dark/20"></div>
@@ -179,7 +179,7 @@ $anchors = array(
             <span class="eyebrow mb-6"><?php echo esc_html( $eyebrow ); ?></span>
 
             <!-- Titre -->
-            <h1 class="font-black text-5xl lg:text-[72px] uppercase leading-[1.05] tracking-tight mt-4 max-w-4xl">
+            <h1 class="font-black text-3xl md:text-5xl lg:text-[72px] uppercase leading-[1.05] tracking-tight mt-4 max-w-4xl">
                 <?php
                 $title_parts = explode( ' ', $hero_title );
                 $last_word   = array_pop( $title_parts );
@@ -235,7 +235,7 @@ $anchors = array(
 
             <!-- Colonne gauche : texte + timeline -->
             <div class="flex flex-col justify-center lg:pr-16 py-8">
-                <div class="font-black text-[80px] text-background-dark/[0.04] leading-none select-none">01</div>
+                <div class="font-black text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">01</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Qui Sommes-Nous', 'rcg' ); ?></span>
                 <h2 class="font-black text-4xl lg:text-5xl uppercase leading-tight tracking-tight text-background-dark"><?php echo esc_html( $hist_title ); ?></h2>
                 <div class="line-accent mt-4 mb-6"></div>
@@ -276,8 +276,8 @@ $anchors = array(
             </div>
 
             <!-- Colonne droite : image + citation -->
-            <div class="relative h-[600px] lg:h-auto group overflow-hidden">
-                <img src="<?php echo esc_url( $hist_img_url ); ?>" alt="Direction RCG" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]">
+            <div class="relative h-[350px] lg:h-auto group overflow-hidden">
+                <img src="<?php echo esc_url( $hist_img_url ); ?>" alt="Direction RCG" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" decoding="async">
                 <div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/30 to-transparent"></div>
 
                 <!-- Citation overlay -->
@@ -305,7 +305,7 @@ $anchors = array(
         <!-- En-tete -->
         <div class="grid lg:grid-cols-3 gap-12 mb-16">
             <div class="lg:col-span-2">
-                <div class="font-black text-[80px] text-white/[0.04] leading-none select-none">02</div>
+                <div class="font-black text-[40px] lg:text-[80px] text-white/[0.04] leading-none select-none">02</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Notre ADN', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-5xl uppercase leading-tight tracking-tight mt-2">Les 5 piliers<br>de l'excellence</h2>
                 <div class="line-accent mt-4 mb-6"></div>
@@ -340,11 +340,11 @@ $anchors = array(
      ============================================ -->
 <section id="valeurs" class="py-24 bg-white scroll-mt-24 reveal">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
             <!-- Image gauche -->
-            <div class="relative h-[500px] group overflow-hidden">
-                <img src="<?php echo esc_url( $valeurs_img_url ); ?>" alt="Valeurs RCG" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-700">
+            <div class="relative h-[300px] lg:h-[500px] group overflow-hidden">
+                <img src="<?php echo esc_url( $valeurs_img_url ); ?>" alt="Valeurs RCG" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-700" loading="lazy" decoding="async">
                 <div class="absolute inset-0 bg-gradient-to-t from-background-dark/70 to-transparent"></div>
                 <div class="absolute top-4 left-4">
                     <span class="tag-pill text-primary border-primary/40 bg-white/90 backdrop-blur-sm">Nos Valeurs</span>
@@ -354,7 +354,7 @@ $anchors = array(
 
             <!-- Texte droite -->
             <div>
-                <div class="font-black text-[80px] text-background-dark/[0.04] leading-none select-none">03</div>
+                <div class="font-black text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">03</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Ce Qui Nous Définit', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-4xl uppercase leading-tight tracking-tight mt-2"><?php esc_html_e( 'Valeurs & Engagements', 'rcg' ); ?></h2>
                 <div class="line-accent mt-4 mb-6"></div>
@@ -390,13 +390,13 @@ $anchors = array(
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="font-black text-[80px] text-white/[0.04] leading-none select-none">04</div>
+        <div class="font-black text-[40px] lg:text-[80px] text-white/[0.04] leading-none select-none">04</div>
         <span class="eyebrow mb-4"><?php esc_html_e( 'Présence Régionale', 'rcg' ); ?></span>
         <h2 class="font-black text-3xl lg:text-5xl uppercase leading-tight tracking-tight mt-2">Ancrés en Afrique,<br>connectés au monde</h2>
         <div class="line-accent mt-4 mb-6"></div>
         <p class="text-white/60 text-sm leading-relaxed max-w-2xl mb-16">Siege social a Abidjan, Cocody 8e Tranche. Un reseau de correspondants dans plus de 10 pays d'Afrique de l'Ouest et de la zone CEDEAO. Une capacite d'intervention regionale rapide et efficace.</p>
 
-        <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             <!-- Bureaux -->
             <div class="space-y-6">
                 <?php foreach ( $bureaux as $i => $bureau ) :
@@ -456,7 +456,7 @@ $anchors = array(
         <!-- En-tete -->
         <div class="grid lg:grid-cols-3 gap-12 mb-16">
             <div class="lg:col-span-2">
-                <div class="font-black text-[80px] text-background-dark/[0.04] leading-none select-none">05</div>
+                <div class="font-black text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">05</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Les Hommes & Femmes RCG', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-4xl uppercase leading-tight tracking-tight mt-2">Une équipe d'élite<br>à votre service</h2>
                 <div class="line-accent mt-4 mb-6"></div>
@@ -488,7 +488,7 @@ $anchors = array(
             ?>
                 <div class="group relative overflow-hidden">
                     <?php if ( $pole_img ) : ?>
-                        <img src="<?php echo esc_url( $pole_img ); ?>" alt="<?php echo esc_attr( $pole['line1'] . ' ' . $pole['line2'] ); ?>" class="w-full h-64 object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500">
+                        <img src="<?php echo esc_url( $pole_img ); ?>" alt="<?php echo esc_attr( $pole['line1'] . ' ' . $pole['line2'] ); ?>" class="w-full h-64 object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" loading="lazy" decoding="async">
                     <?php else : ?>
                         <div class="w-full h-64 bg-gray-300"></div>
                     <?php endif; ?>

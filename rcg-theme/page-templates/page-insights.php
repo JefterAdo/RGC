@@ -110,7 +110,7 @@ $bg_map = array(
         $hero_thumb = $hero_url;
     }
     ?>
-    <img src="<?php echo esc_url( $hero_thumb ); ?>" alt="Insights RCG" class="absolute inset-0 w-full h-full object-cover opacity-35">
+    <img src="<?php echo esc_url( $hero_thumb ); ?>" alt="Insights RCG" class="absolute inset-0 w-full h-full object-cover opacity-35" loading="eager" fetchpriority="high" decoding="async">
     <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/75 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
 
@@ -131,7 +131,7 @@ $bg_map = array(
                     <span class="text-white/30 text-[9px] uppercase tracking-widest font-semibold"><?php echo esc_html( $f_date ); ?></span>
                     <span class="read-time"><?php echo esc_html( $f_read ); ?> min de lecture</span>
                 </div>
-                <h1 class="font-black text-4xl lg:text-[60px] uppercase leading-[1.05] mb-6 tracking-tight">
+                <h1 class="font-black text-2xl md:text-4xl lg:text-[60px] uppercase leading-[1.05] mb-6 tracking-tight">
                     <?php echo esc_html( get_the_title( $featured_id ) ); ?>
                 </h1>
                 <div class="line-accent mb-6"></div>
@@ -153,7 +153,7 @@ $bg_map = array(
                     <span class="text-white/30 text-[9px] uppercase tracking-widest font-semibold">Mars 2026</span>
                     <span class="read-time">8 min de lecture</span>
                 </div>
-                <h1 class="font-black text-4xl lg:text-[60px] uppercase leading-[1.05] mb-6 tracking-tight">
+                <h1 class="font-black text-2xl md:text-4xl lg:text-[60px] uppercase leading-[1.05] mb-6 tracking-tight">
                     Communication institutionnelle : enjeux et <span class="text-primary">stratégie</span> en Afrique de l'Ouest
                 </h1>
                 <div class="line-accent mb-6"></div>
@@ -287,7 +287,7 @@ $bg_map = array(
                                 <span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold"><?php echo esc_html( get_the_date( 'M. Y' ) ); ?></span>
                             </div>
                             <div class="relative">
-                                <span class="font-serif text-7xl text-primary/10 absolute -top-2 -left-2">"</span>
+                                <span class="font-serif text-5xl lg:text-7xl text-primary/10 absolute -top-2 -left-2">"</span>
                                 <h3 class="font-bold text-lg uppercase tracking-tight leading-tight pt-8 mb-4">
                                     <a href="<?php the_permalink(); ?>" class="hover:text-primary transition-colors"><?php echo esc_html( get_the_title() ); ?></a>
                                 </h3>
@@ -324,7 +324,7 @@ $bg_map = array(
                                 <?php endif; ?>
                                 <span class="text-[9px] uppercase tracking-widest text-white/40 font-semibold"><?php echo esc_html( get_the_date( 'M. Y' ) ); ?></span>
                             </div>
-                            <div class="font-black text-6xl text-primary leading-none mb-2"><?php echo esc_html( $stat_val ); ?></div>
+                            <div class="font-black text-4xl lg:text-6xl text-primary leading-none mb-2"><?php echo esc_html( $stat_val ); ?></div>
                             <?php if ( $stat_label ) : ?>
                                 <span class="text-[10px] uppercase tracking-widest text-white/40"><?php echo esc_html( $stat_label ); ?></span>
                             <?php endif; ?>
@@ -393,7 +393,7 @@ $bg_map = array(
             ?>
                 <div class="article-card <?php echo esc_attr( $art['bg'] . $art['span'] ); ?> group reveal" data-cat="<?php echo esc_attr( $art['cat_slug'] ); ?>">
                     <div class="relative <?php echo esc_attr( $art['img_h'] ); ?> overflow-hidden">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $art['img'] ); ?>" alt="<?php echo esc_attr( $art['title'] ); ?>" class="w-full h-full object-cover">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $art['img'] ); ?>" alt="<?php echo esc_attr( $art['title'] ); ?>" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t <?php echo $art['dark'] ? 'from-surface-dark via-surface-dark/40' : 'from-background-dark/50'; ?> to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <span class="cat-tag <?php echo esc_attr( $art['cat_class'] ); ?>"><?php echo esc_html( $art['cat'] ); ?></span>
@@ -426,7 +426,7 @@ $bg_map = array(
                             <span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold"><?php echo esc_html( $art['date'] ); ?></span>
                         </div>
                         <div class="relative">
-                            <span class="font-serif text-7xl text-primary/10 absolute -top-2 -left-2">"</span>
+                            <span class="font-serif text-5xl lg:text-7xl text-primary/10 absolute -top-2 -left-2">"</span>
                             <h3 class="font-bold text-lg uppercase tracking-tight leading-tight pt-8 mb-4"><?php echo esc_html( $art['title'] ); ?></h3>
                         </div>
                         <p class="text-sm text-gray-500 leading-relaxed"><?php echo esc_html( $art['excerpt'] ); ?></p>
@@ -449,7 +449,7 @@ $bg_map = array(
                             <span class="cat-tag text-accent-rapport border-accent-rapport/40"><?php echo esc_html( $art['cat'] ); ?></span>
                             <span class="text-[9px] uppercase tracking-widest text-white/40 font-semibold"><?php echo esc_html( $art['date'] ); ?></span>
                         </div>
-                        <div class="font-black text-6xl text-primary leading-none mb-2"><?php echo esc_html( $art['stat'] ); ?><span class="text-3xl"><?php echo esc_html( $art['stat_unit'] ); ?></span></div>
+                        <div class="font-black text-4xl lg:text-6xl text-primary leading-none mb-2"><?php echo esc_html( $art['stat'] ); ?><span class="text-3xl"><?php echo esc_html( $art['stat_unit'] ); ?></span></div>
                         <span class="text-[10px] uppercase tracking-widest text-white/40"><?php echo esc_html( $art['stat_label'] ); ?></span>
                         <h3 class="font-bold text-lg uppercase tracking-tight leading-tight mt-6 mb-3"><?php echo esc_html( $art['title'] ); ?></h3>
                         <p class="text-sm text-white/50 leading-relaxed"><?php echo esc_html( $art['excerpt'] ); ?></p>
@@ -509,7 +509,7 @@ $bg_map = array(
      ============================================ -->
 <section class="newsletter-band py-24 text-white reveal">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
             <!-- Texte -->
             <div>

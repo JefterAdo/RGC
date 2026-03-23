@@ -71,6 +71,7 @@ $archive_link = $reals_page ? get_permalink( $reals_page ) : home_url( '/realisa
                                 alt="<?php echo esc_attr( $real['alt'] ); ?>"
                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                 loading="lazy"
+                                decoding="async"
                             >
                         </div>
                         <div class="p-8 space-y-4">

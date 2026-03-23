@@ -86,7 +86,7 @@ while ( have_posts() ) :
 <?php if ( has_post_thumbnail() ) : ?>
 <section class="bg-surface-dark">
     <div class="container mx-auto px-6 lg:px-12 py-12">
-        <div class="max-h-[600px] overflow-hidden">
+        <div class="max-h-[300px] lg:max-h-[600px] overflow-hidden">
             <?php the_post_thumbnail( 'hero-large', array( 'class' => 'w-full h-full object-cover' ) ); ?>
         </div>
     </div>
@@ -96,7 +96,7 @@ while ( have_posts() ) :
 <!-- Contenu -->
 <section class="bg-white py-24">
     <div class="container mx-auto px-6 lg:px-12">
-        <div class="grid lg:grid-cols-3 gap-16">
+        <div class="grid lg:grid-cols-3 gap-8 lg:gap-16">
             <!-- Contenu principal -->
             <div class="lg:col-span-2 prose prose-lg max-w-none text-gray-600">
                 <?php the_content(); ?>

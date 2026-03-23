@@ -73,16 +73,16 @@ if ( ! $is_static && function_exists( 'have_rows' ) && have_rows( 'expertise_tag
 
     <?php if ( 'dark' === $bg ) : ?>
     <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-10 left-0 font-black text-[400px] leading-none text-white/10 tracking-tighter select-none">!</div>
+        <div class="absolute top-10 left-0 font-black text-[80px] md:text-[200px] lg:text-[400px] leading-none text-white/10 tracking-tighter select-none">!</div>
     </div>
     <?php endif; ?>
 
     <?php if ( 'cards' === $list_type ) : ?>
     <!-- ===== LAYOUT CARDS (Branding) ===== -->
     <div class="container mx-auto px-6 lg:px-12 reveal visible">
-        <div class="grid lg:grid-cols-3 gap-12 mb-16">
+        <div class="grid lg:grid-cols-3 gap-6 lg:gap-12 mb-16">
             <div class="lg:col-span-2">
-                <span class="font-black text-[80px] <?php echo esc_attr( $number_color ); ?> leading-none block mb-2"><?php echo esc_html( $number ); ?></span>
+                <span class="font-black text-[40px] lg:text-[80px] <?php echo esc_attr( $number_color ); ?> leading-none block mb-2"><?php echo esc_html( $number ); ?></span>
                 <?php if ( $eyebrow ) : ?>
                     <span class="eyebrow mb-6">&mdash; <?php echo esc_html( $eyebrow ); ?></span>
                 <?php endif; ?>
@@ -133,8 +133,8 @@ if ( ! $is_static && function_exists( 'have_rows' ) && have_rows( 'expertise_tag
         // --- IMAGE A GAUCHE ---
         if ( $show_image_first && $image_url ) :
         ?>
-        <div class="exp-img-wrap relative h-[400px] lg:h-auto overflow-hidden group">
-            <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="w-full h-full object-cover object-center">
+        <div class="exp-img-wrap relative h-[280px] lg:h-auto overflow-hidden group">
+            <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
             <?php if ( 'gray' === $bg ) : ?>
                 <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#f4f4f4]/60"></div>
             <?php else : ?>
@@ -164,10 +164,10 @@ if ( ! $is_static && function_exists( 'have_rows' ) && have_rows( 'expertise_tag
 
             <?php if ( ! $show_image_first ) : ?>
                 <div class="flex items-center gap-4 mb-4">
-                    <span class="font-black text-[80px] <?php echo esc_attr( $number_color ); ?> leading-none"><?php echo esc_html( $number ); ?></span>
+                    <span class="font-black text-[40px] lg:text-[80px] <?php echo esc_attr( $number_color ); ?> leading-none"><?php echo esc_html( $number ); ?></span>
                 </div>
             <?php else : ?>
-                <span class="font-black text-[80px] <?php echo esc_attr( $number_color ); ?> leading-none mb-2"><?php echo esc_html( $number ); ?></span>
+                <span class="font-black text-[40px] lg:text-[80px] <?php echo esc_attr( $number_color ); ?> leading-none mb-2"><?php echo esc_html( $number ); ?></span>
             <?php endif; ?>
 
             <?php if ( $eyebrow ) : ?>
@@ -275,8 +275,8 @@ if ( ! $is_static && function_exists( 'have_rows' ) && have_rows( 'expertise_tag
         // --- IMAGE A DROITE ---
         if ( ! $show_image_first && $image_url ) :
         ?>
-        <div class="exp-img-wrap relative h-[500px] lg:h-auto overflow-hidden group">
-            <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="w-full h-full object-cover">
+        <div class="exp-img-wrap relative h-[280px] lg:h-auto overflow-hidden group">
+            <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="w-full h-full object-cover" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/30 to-transparent"></div>
 
             <?php if ( ! empty( $tags ) ) : ?>

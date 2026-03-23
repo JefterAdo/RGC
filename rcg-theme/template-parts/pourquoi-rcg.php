@@ -19,7 +19,7 @@ $cta_url        = get_theme_mod( 'rcg_cta_button_url', $cta_default );
 ?>
 
 <section class="bg-surface-dark py-24 text-white">
-    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <!-- Titre -->
         <div>
             <span class="text-primary font-bold text-sm tracking-widest uppercase">&mdash; <?php echo esc_html( $label ); ?></span>

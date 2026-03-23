@@ -169,9 +169,9 @@ if ( ! $reals_url ) {
         $header_img = get_field( 'expertise_header_image' );
         if ( $header_img ) :
         ?>
-            <img src="<?php echo esc_url( $header_img['url'] ); ?>" alt="<?php echo esc_attr( $header_img['alt'] ); ?>" class="w-full h-full object-cover opacity-30 object-top">
+            <img src="<?php echo esc_url( $header_img['url'] ); ?>" alt="<?php echo esc_attr( $header_img['alt'] ); ?>" class="w-full h-full object-cover opacity-30 object-top" loading="eager" fetchpriority="high" decoding="async">
         <?php else : ?>
-            <img src="<?php echo esc_url( RCG_URI . '/assets/images/exp-header-hero.png' ); ?>" alt="Expertises RCG" class="w-full h-full object-cover opacity-30 object-top">
+            <img src="<?php echo esc_url( RCG_URI . '/assets/images/exp-header-hero.png' ); ?>" alt="Expertises RCG" class="w-full h-full object-cover opacity-30 object-top" loading="eager" fetchpriority="high" decoding="async">
         <?php endif; ?>
         <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-background-dark/20"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
@@ -189,7 +189,7 @@ if ( ! $reals_url ) {
 
             <span class="eyebrow mb-6">&mdash; Nos Expertises en Communication</span>
 
-            <h1 class="font-black text-5xl lg:text-[72px] uppercase leading-[1.05] mb-8 tracking-tight mt-4">
+            <h1 class="font-black text-3xl md:text-5xl lg:text-[72px] uppercase leading-[1.05] mb-8 tracking-tight mt-4">
                 <?php
                 $hero_title = get_field( 'expertise_hero_title' );
                 echo esc_html( $hero_title ? $hero_title : 'Dix domaines d\'expertise au service de votre influence' );

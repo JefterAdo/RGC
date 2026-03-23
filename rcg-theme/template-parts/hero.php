@@ -21,8 +21,8 @@ $cta2_default = get_permalink( get_page_by_path( 'realisations' ) ) ?: home_url(
 $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
 ?>
 
-<section class="relative min-h-[95vh] bg-background-dark flex flex-col justify-center overflow-hidden">
-    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center py-20">
+<section class="relative min-h-[80vh] lg:min-h-[95vh] bg-background-dark flex flex-col justify-center overflow-hidden">
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
 
         <!-- Contenu texte -->
         <div class="z-10 flex flex-col items-start space-y-8">
@@ -30,7 +30,7 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
                 <span class="text-primary font-bold text-sm tracking-widest uppercase">&mdash; <?php echo esc_html( $label ); ?></span>
             </div>
 
-            <h1 class="text-white text-5xl lg:text-[76px] font-black leading-[1.05] uppercase">
+            <h1 class="text-white text-3xl md:text-5xl lg:text-[76px] font-black leading-[1.05] uppercase">
                 <?php echo nl2br( esc_html( $title ) ); ?>
             </h1>
 
@@ -53,14 +53,17 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
         </div>
 
         <!-- Image Hero -->
-        <div class="relative h-[500px] lg:h-[700px] grayscale hover:grayscale-0 transition-all duration-700">
+        <div class="relative h-[300px] md:h-[400px] lg:h-[700px] grayscale hover:grayscale-0 transition-all duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
             <?php if ( $image ) : ?>
                 <img
                     src="<?php echo esc_url( $image['url'] ); ?>"
                     alt="<?php echo esc_attr( $image['alt'] ); ?>"
                     class="w-full h-full object-cover"
+                    width="1920" height="1080"
                     loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
                 >
             <?php elseif ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail( 'hero-large', array( 'class' => 'w-full h-full object-cover' ) ); ?>
@@ -69,7 +72,10 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
                     src="<?php echo esc_url( RCG_URI . '/assets/images/hero-professionnel.png' ); ?>"
                     alt="<?php esc_attr_e( 'RCG Communication', 'rcg' ); ?>"
                     class="w-full h-full object-cover"
+                    width="1920" height="1080"
                     loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
                 >
             <?php endif; ?>
         </div>

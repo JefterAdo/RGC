@@ -14,8 +14,8 @@ get_header();
 
 <section class="bg-background-dark min-h-[70vh] flex items-center justify-center text-white">
     <div class="container mx-auto px-6 lg:px-12 text-center">
-        <span class="text-primary font-black text-[200px] lg:text-[300px] leading-none opacity-20 select-none block">404</span>
-        <h1 class="text-4xl lg:text-5xl font-black uppercase -mt-16 relative z-10">
+        <span class="text-primary font-black text-[80px] md:text-[150px] lg:text-[300px] leading-none opacity-20 select-none block">404</span>
+        <h1 class="text-3xl lg:text-5xl font-black uppercase -mt-10 lg:-mt-16 relative z-10">
             <?php esc_html_e( 'Page introuvable', 'rcg' ); ?>
         </h1>
         <p class="text-white/60 text-lg mt-6 max-w-md mx-auto">

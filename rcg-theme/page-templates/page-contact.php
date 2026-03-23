@@ -13,22 +13,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // === Donnees ACF ===
-$hero_eyebrow = get_field( 'ct_hero_eyebrow' ) ?: 'Prise de Contact';
-$hero_title   = get_field( 'ct_hero_title' ) ?: 'Travaillons Ensemble.';
-$hero_desc    = get_field( 'ct_hero_desc' ) ?: 'Décrivez votre projet — notre équipe vous répondra sous 24 heures ouvrables.';
+$hero_eyebrow = get_field( 'ct_hero_eyebrow' ) ?: 'Contactez-nous';
+$hero_title   = get_field( 'ct_hero_title' ) ?: 'Parlons de vos enjeux.';
+$hero_desc    = get_field( 'ct_hero_desc' ) ?: 'Vous avez un enjeu de communication institutionnelle en Afrique de l\'Ouest ? Décrivez votre projet — notre équipe à Abidjan vous répond sous 24 heures ouvrables.';
 
-$form_title     = get_field( 'ct_form_title' ) ?: 'Décrivez votre besoin';
+$form_title     = get_field( 'ct_form_title' ) ?: 'Décrivez votre besoin en communication';
 $form_shortcode = get_field( 'ct_form_shortcode' );
 
-$tel     = get_field( 'ct_tel' ) ?: '+225 00 00 00 00';
-$email   = get_field( 'ct_email' ) ?: 'contact@rcg.com';
-$promise = get_field( 'ct_promise' ) ?: '"Notre engagement : vous répondre sous 24 heures ouvrables en toute confidentialité."';
+$tel     = get_field( 'ct_tel' ) ?: '+225 25 22 00 46 71';
+$email   = get_field( 'ct_email' ) ?: 'info@rcgwestafrica.com';
+$promise = get_field( 'ct_promise' ) ?: '"Notre engagement : vous répondre sous 24 heures ouvrables en toute confidentialité." — Ibrahim KOUROUMA, Fondateur & DG';
 
 $bureaux = get_field( 'ct_bureaux' );
 if ( ! $bureaux ) {
     $bureaux = array(
-        array( 'label' => 'Siège Abidjan', 'color' => 'primary', 'address' => 'Cocody 2 Plateaux<br>Abidjan, Côte d\'Ivoire' ),
-        array( 'label' => 'Bureau Paris',  'color' => 'blue',    'address' => '75008 Paris<br>France' ),
+        array( 'label' => 'Siège — Abidjan', 'color' => 'primary', 'address' => 'Cocody 8e Tranche<br>Abidjan, Côte d\'Ivoire' ),
+        array( 'label' => 'Zone d\'intervention',  'color' => 'blue',    'address' => 'Afrique de l\'Ouest<br>CEDEAO — 15 pays' ),
     );
 }
 
@@ -43,7 +43,7 @@ $map_embed = get_field( 'ct_map_embed' );
         <span class="text-primary font-bold text-[10px] tracking-[3px] uppercase flex items-center gap-3 mb-6">
             <span class="w-8 h-[2px] bg-primary"></span> <?php echo esc_html( $hero_eyebrow ); ?>
         </span>
-        <h1 class="font-black text-5xl lg:text-[64px] uppercase leading-[1.1] mb-6">
+        <h1 class="font-black text-3xl md:text-5xl lg:text-[64px] uppercase leading-[1.1] mb-6">
             <?php echo esc_html( $hero_title ); ?>
         </h1>
         <p class="text-white/55 text-lg max-w-2xl"><?php echo esc_html( $hero_desc ); ?></p>
@@ -96,7 +96,7 @@ $map_embed = get_field( 'ct_map_embed' );
                         </div>
                         <div class="flex flex-col">
                             <label><?php esc_html_e( 'Organisation / Institution *', 'rcg' ); ?></label>
-                            <input type="text" name="rcg_org" placeholder="Gouvernement, Entreprise..." required>
+                            <input type="text" name="rcg_org" placeholder="Ministère, Institution, Entreprise..." required>
                         </div>
                         <div class="flex flex-col">
                             <label><?php esc_html_e( 'Fonction / Titre *', 'rcg' ); ?></label>
@@ -119,18 +119,20 @@ $map_embed = get_field( 'ct_map_embed' );
                     <div class="flex flex-col">
                         <label><?php esc_html_e( 'Type de besoin *', 'rcg' ); ?></label>
                         <select name="rcg_besoin" required>
-                            <option value="" selected><?php esc_html_e( 'Sélectionnez une thématique', 'rcg' ); ?></option>
-                            <option value="strat"><?php esc_html_e( 'Stratégie de Communication', 'rcg' ); ?></option>
-                            <option value="rep"><?php esc_html_e( 'Gestion d\'Image & Réputation', 'rcg' ); ?></option>
-                            <option value="pr"><?php esc_html_e( 'Relations Médias', 'rcg' ); ?></option>
+                            <option value="" selected><?php esc_html_e( 'Sélectionnez une expertise', 'rcg' ); ?></option>
+                            <option value="conseil"><?php esc_html_e( 'Conseil Stratégique en Communication', 'rcg' ); ?></option>
+                            <option value="rp"><?php esc_html_e( 'Relations Publiques & Institutionnelles', 'rcg' ); ?></option>
+                            <option value="presse"><?php esc_html_e( 'Relations Presse & Médias', 'rcg' ); ?></option>
+                            <option value="contenus"><?php esc_html_e( 'Création de Contenus & Éditorial', 'rcg' ); ?></option>
                             <option value="crise"><?php esc_html_e( 'Communication de Crise', 'rcg' ); ?></option>
-                            <option value="autre"><?php esc_html_e( 'Autre', 'rcg' ); ?></option>
+                            <option value="branding"><?php esc_html_e( 'Branding & Événementiel', 'rcg' ); ?></option>
+                            <option value="autre"><?php esc_html_e( 'Autre demande', 'rcg' ); ?></option>
                         </select>
                     </div>
 
                     <div class="flex flex-col">
                         <label><?php esc_html_e( 'Message / Description du projet *', 'rcg' ); ?></label>
-                        <textarea name="rcg_message" rows="6" placeholder="Parlez-nous de vos objectifs..." required></textarea>
+                        <textarea name="rcg_message" rows="6" placeholder="Décrivez vos enjeux de communication institutionnelle, vos objectifs et le contexte de votre demande..." required></textarea>
                     </div>
 
                     <button type="submit" class="w-full h-14 bg-primary text-white font-bold text-xs uppercase tracking-[2px] hover:bg-red-700 transition-colors mt-4">
@@ -145,7 +147,7 @@ $map_embed = get_field( 'ct_map_embed' );
 
         <!-- Sidebar : infos de contact -->
         <div class="contact-info-card p-12 text-white h-auto self-start mt-8 lg:mt-0">
-            <div class="font-black text-2xl font-display mb-2">RCG</div>
+            <div class="font-black text-2xl font-display mb-2">RCG West Africa</div>
             <div class="w-full h-[2px] bg-primary mb-10"></div>
 
             <?php foreach ( $bureaux as $i => $bureau ) :

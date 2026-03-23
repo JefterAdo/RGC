@@ -15,7 +15,7 @@ $newsletter  = get_theme_mod( 'rcg_newsletter_text', 'Recevez nos analyses et in
 ?>
 
 <footer class="bg-background-dark border-t-4 border-primary pt-20 pb-10 text-white">
-    <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
 
         <!-- Colonne 1 : Logo + Description + Reseaux sociaux -->
         <div class="space-y-6">

@@ -113,7 +113,7 @@ $cat_slug_map = array(
      ============================================ -->
 <header class="relative bg-background-dark text-white min-h-[75vh] flex items-end overflow-hidden">
     <!-- Image de fond -->
-    <img src="<?php echo esc_url( $hero_url ); ?>" alt="<?php echo esc_attr( $hero_title ); ?>" class="absolute inset-0 w-full h-full object-cover object-top opacity-35" loading="eager">
+    <img src="<?php echo esc_url( $hero_url ); ?>" alt="<?php echo esc_attr( $hero_title ); ?>" class="absolute inset-0 w-full h-full object-cover object-top opacity-35" loading="eager" fetchpriority="high" decoding="async">
 
     <!-- Gradient overlays -->
     <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-background-dark/20"></div>
@@ -135,7 +135,7 @@ $cat_slug_map = array(
         <span class="eyebrow mb-6"><?php echo esc_html( $eyebrow ); ?></span>
 
         <!-- Titre -->
-        <h1 class="font-black text-5xl lg:text-[72px] uppercase leading-[1.05] tracking-tight mt-4 max-w-4xl">
+        <h1 class="font-black text-3xl md:text-5xl lg:text-[72px] uppercase leading-[1.05] tracking-tight mt-4 max-w-4xl">
             <?php
             $title_parts = explode( ' ', $hero_title );
             $last_word   = array_pop( $title_parts );
@@ -253,7 +253,7 @@ $has_featured = $featured_query->have_posts();
                     </div>
                     <!-- Image -->
                     <div class="relative h-80 lg:h-auto overflow-hidden">
-                        <img src="<?php echo esc_url( $f_thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="<?php echo esc_url( $f_thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent lg:hidden"></div>
                         <div class="absolute bottom-0 left-0 right-0 h-1 bg-primary"></div>
                     </div>
@@ -290,7 +290,7 @@ $has_featured = $featured_query->have_posts();
                     </a>
                 </div>
                 <div class="relative h-80 lg:h-auto overflow-hidden">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/real-mission-signature.png' ); ?>" alt="Stratégie Ministère Économie" class="absolute inset-0 w-full h-full object-cover">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/real-mission-signature.png' ); ?>" alt="Stratégie Ministère Économie" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async">
                     <div class="absolute bottom-0 left-0 right-0 h-1 bg-primary"></div>
                 </div>
             </div>
@@ -333,7 +333,7 @@ $has_featured = $featured_query->have_posts();
                     <!-- Image -->
                     <div class="case-img relative h-52 overflow-hidden">
                         <?php if ( $r_thumb_url ) : ?>
-                            <img src="<?php echo esc_url( $r_thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover">
+                            <img src="<?php echo esc_url( $r_thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         <?php endif; ?>
                         <div class="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent"></div>
                         <!-- Badge categorie -->
@@ -447,7 +447,7 @@ $has_featured = $featured_query->have_posts();
             ?>
                 <div class="case-card case-item bg-white flex flex-col cursor-default border-t-[3px] border-transparent hover:border-primary" data-cat="<?php echo esc_attr( $case['cat'] ); ?>">
                     <div class="case-img relative h-52 overflow-hidden">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $case['img'] ); ?>" alt="<?php echo esc_attr( $case['title'] ); ?>" class="w-full h-full object-cover">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $case['img'] ); ?>" alt="<?php echo esc_attr( $case['title'] ); ?>" class="w-full h-full object-cover" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <span class="tag-pill <?php echo esc_attr( $case['color'] ); ?> bg-white/80 backdrop-blur-sm">
@@ -555,7 +555,7 @@ $has_featured = $featured_query->have_posts();
             <span class="eyebrow mb-4"><?php esc_html_e( 'Histoire & Impact', 'rcg' ); ?></span>
             <h2 class="text-3xl lg:text-5xl font-black uppercase tracking-tight mt-2 mb-16"><?php esc_html_e( '15+ ans d\'excellence en communication', 'rcg' ); ?></h2>
 
-            <div class="grid lg:grid-cols-2 gap-16">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16">
                 <!-- Timeline gauche -->
                 <div class="space-y-0">
                     <?php foreach ( $timeline as $entry ) :

@@ -77,8 +77,8 @@ function rcg_seo_meta_tags() {
 		$title = 'Expertises en Communication Institutionnelle — ' . $site_name;
 		$desc  = 'Conseil strategique, relations publiques, communication de crise, relations presse, creation de contenus, branding et evenementiel. Les 10 expertises de RCG West Africa en Afrique de l\'Ouest.';
 	} elseif ( is_page( 'contact' ) ) {
-		$title = 'Contactez RCG West Africa — ' . $site_name;
-		$desc  = 'Contactez RCG West Africa a Abidjan, Cocody 8e Tranche. Tel : +225 25 22 00 46 71. Email : info@rcgwestafrica.com.';
+		$title = 'Contactez RCG West Africa — Agence Communication Institutionnelle Abidjan';
+		$desc  = 'Contactez RCG West Africa a Abidjan, Cocody 8e Tranche. Conseil strategique, relations presse, communication de crise en Afrique de l\'Ouest. Tel : +225 25 22 00 46 71. Reponse sous 24h.';
 	} elseif ( is_page( 'insights' ) ) {
 		$title = 'Insights — Analyses & Decryptages Communication Institutionnelle | ' . $site_name;
 		$desc  = 'RCG Insights : analyses, decryptages et opinions d\'experts sur la communication institutionnelle en Afrique de l\'Ouest. Strategie, relations presse, gestion de crise, personal branding — par RCG West Africa, Abidjan.';
@@ -88,7 +88,15 @@ function rcg_seo_meta_tags() {
 	}
 
 	$desc = rcg_truncate( $desc, 160 );
-	$url  = is_singular() ? get_permalink() : home_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ?? '/' ) ) );
+	if ( is_singular() ) {
+		$url = get_permalink();
+	} elseif ( is_front_page() ) {
+		$url = home_url( '/' );
+	} elseif ( is_post_type_archive() ) {
+		$url = get_post_type_archive_link( get_post_type() );
+	} else {
+		$url = home_url( add_query_arg( array() ) );
+	}
 	$img  = has_post_thumbnail() ? get_the_post_thumbnail_url( null, 'hero-large' ) : '';
 
 	echo '<meta name="description" content="' . esc_attr( $desc ) . '">' . "\n";
@@ -145,6 +153,32 @@ function rcg_schema_organization() {
 	echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
 }
 add_action( 'wp_head', 'rcg_schema_organization', 2 );
+
+/**
+ * Performance : supprimer le support emoji WordPress (economise ~2 KB JS)
+ */
+function rcg_disable_emojis() {
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
+    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+}
+add_action( 'init', 'rcg_disable_emojis' );
+
+/**
+ * Performance : supprimer les ressources inutiles du wp_head
+ */
+function rcg_cleanup_head() {
+    remove_action( 'wp_head', 'wp_generator' );
+    remove_action( 'wp_head', 'wlwmanifest_link' );
+    remove_action( 'wp_head', 'rsd_link' );
+    remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+    remove_action( 'wp_head', 'rest_output_link_wp_head' );
+}
+add_action( 'after_setup_theme', 'rcg_cleanup_head' );
 
 /**
  * Security Headers
@@ -222,6 +256,11 @@ require_once RCG_DIR . '/inc/customizer.php';
 require_once RCG_DIR . '/inc/helpers.php';
 require_once RCG_DIR . '/inc/demo-data.php';
 
+// Trigger reseed pour les nouvelles donnees (articles + menus)
+if ( file_exists( RCG_DIR . '/inc/trigger-demo-seed.php' ) ) {
+    require_once RCG_DIR . '/inc/trigger-demo-seed.php';
+}
+
 /**
  * ACF : Page d'options + champs (si ACF Pro installe)
  */
@@ -251,21 +290,8 @@ if ( function_exists( 'acf_add_options_page' ) ) {
     ) );
 }
 
-/**
- * Zones de widgets
- */
-function rcg_widgets_init() {
-    register_sidebar( array(
-        'name'          => __( 'Footer Newsletter', 'rcg' ),
-        'id'            => 'footer-newsletter',
-        'description'   => __( 'Zone widget pour le formulaire newsletter du footer.', 'rcg' ),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h4 class="text-sm font-bold uppercase tracking-widest mb-6 border-b border-white/10 pb-2">',
-        'after_title'   => '</h4>',
-    ) );
-}
-add_action( 'widgets_init', 'rcg_widgets_init' );
+// Widgets — zones de sidebars
+require_once RCG_DIR . '/inc/widgets.php';
 
 /**
  * Handler du formulaire de contact (fallback sans CF7)
