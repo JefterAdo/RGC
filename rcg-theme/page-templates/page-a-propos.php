@@ -163,7 +163,7 @@ $anchors = array(
     <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
 
     <!-- Triangle decoratif -->
-    <div class="absolute top-0 right-0 w-0 h-0 border-t-[300px] border-r-[300px] border-t-primary/20 border-r-transparent"></div>
+    <div class="hidden lg:block absolute top-0 right-0 w-0 h-0 border-t-[300px] border-r-[300px] border-t-primary/20 border-r-transparent"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 flex items-end" style="min-height:75vh">
         <div class="max-w-3xl pb-0 pt-20">
@@ -235,7 +235,7 @@ $anchors = array(
 
             <!-- Colonne gauche : texte + timeline -->
             <div class="flex flex-col justify-center lg:pr-16 py-8">
-                <div class="font-black text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">01</div>
+                <div class="font-black text-[24px] md:text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">01</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Qui Sommes-Nous', 'rcg' ); ?></span>
                 <h2 class="font-black text-4xl lg:text-5xl uppercase leading-tight tracking-tight text-background-dark"><?php echo esc_html( $hist_title ); ?></h2>
                 <div class="line-accent mt-4 mb-6"></div>
@@ -305,7 +305,7 @@ $anchors = array(
         <!-- En-tete -->
         <div class="grid lg:grid-cols-3 gap-12 mb-16">
             <div class="lg:col-span-2">
-                <div class="font-black text-[40px] lg:text-[80px] text-white/[0.04] leading-none select-none">02</div>
+                <div class="font-black text-[24px] md:text-[40px] lg:text-[80px] text-white/[0.04] leading-none select-none">02</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Notre ADN', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-5xl uppercase leading-tight tracking-tight mt-2">Les 5 piliers<br>de l'excellence</h2>
                 <div class="line-accent mt-4 mb-6"></div>
@@ -354,7 +354,7 @@ $anchors = array(
 
             <!-- Texte droite -->
             <div>
-                <div class="font-black text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">03</div>
+                <div class="font-black text-[24px] md:text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">03</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Ce Qui Nous Définit', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-4xl uppercase leading-tight tracking-tight mt-2"><?php esc_html_e( 'Valeurs & Engagements', 'rcg' ); ?></h2>
                 <div class="line-accent mt-4 mb-6"></div>
@@ -386,11 +386,11 @@ $anchors = array(
 <section id="presence" class="py-24 bg-background-dark text-white relative overflow-hidden scroll-mt-24 reveal">
     <!-- Grand "15" decoratif -->
     <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none">
-        <span class="font-black text-[400px] leading-none text-white tracking-tighter">10+</span>
+        <span class="font-black text-[100px] md:text-[250px] lg:text-[400px] leading-none text-white tracking-tighter">10+</span>
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="font-black text-[40px] lg:text-[80px] text-white/[0.04] leading-none select-none">04</div>
+        <div class="font-black text-[24px] md:text-[40px] lg:text-[80px] text-white/[0.04] leading-none select-none">04</div>
         <span class="eyebrow mb-4"><?php esc_html_e( 'Présence Régionale', 'rcg' ); ?></span>
         <h2 class="font-black text-3xl lg:text-5xl uppercase leading-tight tracking-tight mt-2">Ancrés en Afrique,<br>connectés au monde</h2>
         <div class="line-accent mt-4 mb-6"></div>
@@ -456,7 +456,7 @@ $anchors = array(
         <!-- En-tete -->
         <div class="grid lg:grid-cols-3 gap-12 mb-16">
             <div class="lg:col-span-2">
-                <div class="font-black text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">05</div>
+                <div class="font-black text-[24px] md:text-[40px] lg:text-[80px] text-background-dark/[0.04] leading-none select-none">05</div>
                 <span class="eyebrow mb-4"><?php esc_html_e( 'Les Hommes & Femmes RCG', 'rcg' ); ?></span>
                 <h2 class="font-black text-3xl lg:text-4xl uppercase leading-tight tracking-tight mt-2">Une équipe d'élite<br>à votre service</h2>
                 <div class="line-accent mt-4 mb-6"></div>

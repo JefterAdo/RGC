@@ -120,7 +120,7 @@ $cat_slug_map = array(
     <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
 
     <!-- Triangle decoratif -->
-    <div class="absolute top-0 right-0 w-0 h-0 border-t-[300px] border-r-[300px] border-t-primary/20 border-r-transparent"></div>
+    <div class="hidden lg:block absolute top-0 right-0 w-0 h-0 border-t-[300px] border-r-[300px] border-t-primary/20 border-r-transparent"></div>
 
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-0 pt-32">
 
@@ -492,7 +492,7 @@ $has_featured = $featured_query->have_posts();
 <section class="py-24 bg-background-dark overflow-hidden reveal">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative">
         <!-- Decoratif -->
-        <div class="absolute -top-20 -left-10 text-[300px] font-black text-white/5 leading-none select-none pointer-events-none">&laquo;</div>
+        <div class="absolute -top-20 -left-10 text-[80px] md:text-[200px] lg:text-[300px] font-black text-white/5 leading-none select-none pointer-events-none">&laquo;</div>
 
         <div class="relative z-10 max-w-3xl mx-auto text-center">
             <blockquote class="font-lora italic text-2xl lg:text-3xl text-white/80 leading-relaxed">
@@ -549,7 +549,7 @@ $has_featured = $featured_query->have_posts();
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative">
 
         <!-- Decoratif "18" -->
-        <div class="absolute -top-20 right-0 text-[300px] lg:text-[400px] font-black text-white/5 leading-none select-none pointer-events-none">15+</div>
+        <div class="absolute -top-20 right-0 text-[80px] md:text-[200px] lg:text-[400px] font-black text-white/5 leading-none select-none pointer-events-none">15+</div>
 
         <div class="relative z-10">
             <span class="eyebrow mb-4"><?php esc_html_e( 'Histoire & Impact', 'rcg' ); ?></span>

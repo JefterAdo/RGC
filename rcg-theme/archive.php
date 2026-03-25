@@ -21,7 +21,7 @@ $thematiques = get_terms( array(
 <header class="bg-background-dark py-24 text-white">
     <div class="container mx-auto px-6 lg:px-12">
         <span class="eyebrow mb-6">— Insights</span>
-        <h1 class="text-5xl lg:text-[76px] font-black leading-[1.05] uppercase mt-4">
+        <h1 class="text-3xl md:text-5xl lg:text-[76px] font-black leading-[1.05] uppercase mt-4">
             <?php
             if ( is_category() ) {
                 single_cat_title();

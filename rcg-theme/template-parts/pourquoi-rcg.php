@@ -59,7 +59,7 @@ $cta_url        = get_theme_mod( 'rcg_cta_button_url', $cta_default );
     <!-- Bandeau CTA -->
     <div class="mt-24 bg-primary py-12">
         <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
-            <h3 class="text-3xl font-black uppercase tracking-tight"><?php echo esc_html( $cta_text ); ?></h3>
+            <h3 class="text-xl md:text-3xl font-black uppercase tracking-tight text-center md:text-left"><?php echo esc_html( $cta_text ); ?></h3>
             <a href="<?php echo esc_url( $cta_url ); ?>" class="bg-white text-primary text-xs font-bold uppercase tracking-widest px-10 py-5 rounded-btn hover:scale-105 transition-transform inline-block">
                 <?php echo esc_html( $cta_button ); ?>
             </a>

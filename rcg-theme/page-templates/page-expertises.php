@@ -90,7 +90,7 @@ $static_expertises = array(
         ),
         'quote'    => '',
         'stats'    => array(),
-        'image'    => '',
+        'image'    => RCG_URI . '/assets/images/exp-medias.png',
     ),
     array(
         'number'   => '04',
@@ -127,7 +127,7 @@ $static_expertises = array(
         ),
         'quote'    => '',
         'stats'    => array(),
-        'image'    => '',
+        'image'    => RCG_URI . '/assets/images/exp-crise.png',
     ),
     array(
         'number'   => '06',
@@ -148,7 +148,7 @@ $static_expertises = array(
         ),
         'quote'    => 'L\'identite institutionnelle et l\'evenementiel sont les vitrines de votre credibilite. — RCG West Africa',
         'stats'    => array(),
-        'image'    => '',
+        'image'    => RCG_URI . '/assets/images/exp-branding.png',
     ),
 );
 
@@ -177,7 +177,7 @@ if ( ! $reals_url ) {
         <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
     </div>
 
-    <div class="absolute top-0 right-0 border-t-[300px] border-r-[300px] border-t-primary/20 border-r-transparent z-0"></div>
+    <div class="hidden lg:block absolute top-0 right-0 border-t-[300px] border-r-[300px] border-t-primary/20 border-r-transparent z-0"></div>
 
     <div class="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col justify-end" style="min-height:75vh;padding-bottom:80px;padding-top:80px">
         <div class="max-w-3xl">

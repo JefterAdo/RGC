@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'RCG_VERSION', '1.0.0' );
+define( 'RCG_VERSION', '1.0.1' );
 define( 'RCG_DIR', get_template_directory() );
 define( 'RCG_URI', get_template_directory_uri() );
 

@@ -177,7 +177,7 @@ $has_direction   = $direction_query->have_posts();
                         <div class="absolute bottom-0 left-0 h-1 w-full bg-primary"></div>
                     </div>
 
-                    <div class="bg-surface-dark text-white p-12 lg:p-16 flex flex-col justify-center relative">
+                    <div class="bg-surface-dark text-white p-6 md:p-10 lg:p-16 flex flex-col justify-center relative">
                         <div class="leader-line"></div>
                         <?php if ( $poste ) : ?>
                             <span class="text-primary font-bold text-[9px] tracking-[3px] uppercase mb-8 block"><?php echo esc_html( $poste ); ?></span>
@@ -222,7 +222,7 @@ $has_direction   = $direction_query->have_posts();
                     <div class="absolute bottom-0 left-0 h-1 w-full bg-primary"></div>
                 </div>
 
-                <div class="bg-surface-dark text-white p-12 lg:p-16 flex flex-col justify-center relative">
+                <div class="bg-surface-dark text-white p-6 md:p-10 lg:p-16 flex flex-col justify-center relative">
                     <div class="leader-line"></div>
                     <span class="text-primary font-bold text-[9px] tracking-[3px] uppercase mb-8 block">Fondateur &amp; Directeur General</span>
                     <h2 class="font-black text-4xl lg:text-5xl uppercase leading-[1.1] mb-6 tracking-tight">
@@ -315,7 +315,7 @@ $fallback_seniors = array(
                     $linkedin  = get_field( 'membre_linkedin' );
                     $thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'large' );
                     ?>
-                    <div class="member-card h-[400px] lg:h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $delay * 0.1 ); ?>s">
+                    <div class="member-card h-[280px] md:h-[400px] lg:h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $delay * 0.1 ); ?>s">
                         <?php if ( $thumb_url ) : ?>
                             <img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover object-top absolute inset-0" loading="lazy" decoding="async">
                         <?php endif; ?>
@@ -349,7 +349,7 @@ $fallback_seniors = array(
             <?php else : ?>
                 <!-- Fallback statique -->
                 <?php foreach ( $fallback_seniors as $member ) : ?>
-                    <div class="member-card h-[400px] lg:h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $member['delay'] ); ?>">
+                    <div class="member-card h-[280px] md:h-[400px] lg:h-[520px] bg-surface-dark cursor-pointer reveal" style="transition-delay:<?php echo esc_attr( $member['delay'] ); ?>">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $member['img'] ); ?>" alt="<?php echo esc_attr( $member['name'] ); ?>" class="w-full h-full object-cover object-top absolute inset-0" loading="lazy" decoding="async">
                         <div class="member-overlay"></div>
                         <div class="absolute inset-0 flex flex-col justify-end p-8 z-10">

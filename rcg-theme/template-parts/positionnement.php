@@ -14,7 +14,7 @@ $title = rcg_get_field( 'pos_title', false, 'Premiere agence africaine de consei
 ?>
 
 <section class="bg-white py-24 relative overflow-hidden">
-    <div class="absolute left-0 top-0 text-[10rem] lg:text-[30rem] font-black text-black/[0.03] leading-none select-none -translate-x-1/4 -translate-y-1/4">02</div>
+    <div class="absolute left-0 top-0 text-[8rem] lg:text-[30rem] font-black text-black/[0.03] leading-none select-none -translate-x-1/4 -translate-y-1/4 pointer-events-none overflow-hidden">02</div>
 
     <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 relative z-10">
         <!-- Titre -->

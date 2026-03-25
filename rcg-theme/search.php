@@ -37,7 +37,7 @@ get_header();
                     ?>
                     <a href="<?php the_permalink(); ?>" class="bg-white p-8 flex flex-col lg:flex-row gap-6 group hover:shadow-lg transition-shadow block">
                         <?php if ( has_post_thumbnail() ) : ?>
-                            <div class="w-full lg:w-48 h-32 overflow-hidden flex-shrink-0">
+                            <div class="w-full lg:w-48 h-24 md:h-32 overflow-hidden flex-shrink-0">
                                 <?php the_post_thumbnail( 'card-small', array(
                                     'class' => 'w-full h-full object-cover',
                                 ) ); ?>

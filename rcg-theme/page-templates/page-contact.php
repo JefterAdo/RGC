@@ -54,7 +54,7 @@ $map_embed = get_field( 'ct_map_embed' );
      SECTION 2 : FORMULAIRE + SIDEBAR INFO
      ============================================ -->
 <section class="py-24 bg-white">
-    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-[58%_42%] gap-16">
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-[58%_42%] gap-8 lg:gap-16">
 
         <!-- Colonne formulaire -->
         <div>
@@ -146,7 +146,7 @@ $map_embed = get_field( 'ct_map_embed' );
         </div>
 
         <!-- Sidebar : infos de contact -->
-        <div class="contact-info-card p-12 text-white h-auto self-start mt-8 lg:mt-0">
+        <div class="contact-info-card p-6 md:p-10 lg:p-12 text-white h-auto self-start mt-8 lg:mt-0">
             <div class="font-black text-2xl font-display mb-2">RCG West Africa</div>
             <div class="w-full h-[2px] bg-primary mb-10"></div>
 

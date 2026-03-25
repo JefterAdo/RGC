@@ -21,11 +21,11 @@ $cta2_default = get_permalink( get_page_by_path( 'realisations' ) ) ?: home_url(
 $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
 ?>
 
-<section class="relative min-h-[80vh] lg:min-h-[95vh] bg-background-dark flex flex-col justify-center overflow-hidden">
-    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
+<section class="relative min-h-screen lg:min-h-[95vh] bg-background-dark flex flex-col justify-center overflow-hidden">
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pt-8 pb-32 lg:py-20">
 
         <!-- Contenu texte -->
-        <div class="z-10 flex flex-col items-start space-y-8">
+        <div class="z-10 flex flex-col items-start space-y-6 lg:space-y-8 order-2 lg:order-1">
             <div class="flex items-center gap-4">
                 <span class="text-primary font-bold text-sm tracking-widest uppercase">&mdash; <?php echo esc_html( $label ); ?></span>
             </div>
@@ -53,7 +53,7 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
         </div>
 
         <!-- Image Hero -->
-        <div class="relative h-[300px] md:h-[400px] lg:h-[700px] grayscale hover:grayscale-0 transition-all duration-700">
+        <div class="relative h-[250px] md:h-[400px] lg:h-[700px] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 order-1 lg:order-2">
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
             <?php if ( $image ) : ?>
                 <img
@@ -82,9 +82,9 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
     </div>
 
     <!-- Compteurs -->
-    <div class="absolute bottom-0 w-full bg-surface-dark border-t border-white/5 py-8">
+    <div class="absolute bottom-0 left-0 right-0 bg-surface-dark border-t border-white/5 py-4 lg:py-8">
         <div class="container mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div class="grid grid-cols-3 gap-4 lg:gap-8 text-center md:text-left">
                 <?php
                 if ( function_exists( 'have_rows' ) && have_rows( 'hero_counters' ) ) :
                     $i = 0;
@@ -93,8 +93,8 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
                         $border_class = ( $i > 0 ) ? 'border-white/10 md:border-l md:pl-8' : '';
                         ?>
                         <div class="flex flex-col <?php echo esc_attr( $border_class ); ?>">
-                            <span class="text-white text-3xl font-bold"><?php echo esc_html( get_sub_field( 'value' ) ); ?></span>
-                            <span class="text-white/40 text-[10px] uppercase tracking-widest mt-1"><?php echo esc_html( get_sub_field( 'label' ) ); ?></span>
+                            <span class="text-white text-lg lg:text-3xl font-bold"><?php echo esc_html( get_sub_field( 'value' ) ); ?></span>
+                            <span class="text-white/40 text-[8px] lg:text-[10px] uppercase tracking-widest mt-1"><?php echo esc_html( get_sub_field( 'label' ) ); ?></span>
                         </div>
                         <?php
                         $i++;
@@ -110,8 +110,8 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
                         $border_class = ( $i > 0 ) ? 'border-white/10 md:border-l md:pl-8' : '';
                         ?>
                         <div class="flex flex-col <?php echo esc_attr( $border_class ); ?>">
-                            <span class="text-white text-3xl font-bold"><?php echo esc_html( $counter['value'] ); ?></span>
-                            <span class="text-white/40 text-[10px] uppercase tracking-widest mt-1"><?php echo esc_html( $counter['label'] ); ?></span>
+                            <span class="text-white text-lg lg:text-3xl font-bold"><?php echo esc_html( $counter['value'] ); ?></span>
+                            <span class="text-white/40 text-[8px] lg:text-[10px] uppercase tracking-widest mt-1"><?php echo esc_html( $counter['label'] ); ?></span>
                         </div>
                     <?php endforeach;
                 endif;

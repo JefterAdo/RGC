@@ -27,7 +27,7 @@ $archive_link = $reals_page ? get_permalink( $reals_page ) : home_url( '/realisa
                 <span class="text-primary font-bold text-sm tracking-widest uppercase">&mdash; <?php esc_html_e( 'Realisations', 'rcg' ); ?></span>
                 <h2 class="text-background-dark text-4xl font-black uppercase mt-4"><?php esc_html_e( 'Etudes de cas', 'rcg' ); ?></h2>
             </div>
-            <a class="hidden lg:block text-xs font-bold uppercase tracking-widest border-b border-background-dark pb-1" href="<?php echo esc_url( $archive_link ); ?>">
+            <a class="text-xs font-bold uppercase tracking-widest border-b border-background-dark pb-1" href="<?php echo esc_url( $archive_link ); ?>">
                 <?php esc_html_e( 'Voir tout', 'rcg' ); ?>
             </a>
         </div>
@@ -64,12 +64,12 @@ $archive_link = $reals_page ? get_permalink( $reals_page ) : home_url( '/realisa
                 );
                 foreach ( $static_reals as $real ) :
                     ?>
-                    <div class="bg-surface-dark group">
-                        <div class="h-64 overflow-hidden">
+                    <div class="bg-surface-dark group overflow-hidden">
+                        <div class="h-48 md:h-64 overflow-hidden">
                             <img
                                 src="<?php echo esc_url( $real['img'] ); ?>"
                                 alt="<?php echo esc_attr( $real['alt'] ); ?>"
-                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                class="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
                                 loading="lazy"
                                 decoding="async"
                             >

@@ -96,7 +96,7 @@ $bg_map = array(
 <!-- ============================================
      HERO HEADER — Article a la une
      ============================================ -->
-<header class="relative bg-background-dark text-white overflow-hidden" style="min-height:90vh">
+<header class="relative bg-background-dark text-white overflow-hidden min-h-[65vh] lg:min-h-[90vh]">
     <!-- Red accent line top -->
     <div class="absolute top-0 left-0 w-full h-1 bg-primary z-20"></div>
 
@@ -114,7 +114,7 @@ $bg_map = array(
     <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/75 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 flex items-end justify-start" style="min-height:90vh">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 flex items-end justify-start min-h-[65vh] lg:min-h-[90vh]">
         <div class="max-w-2xl pb-24 pt-20">
             <?php if ( $featured_post ) : ?>
                 <?php
@@ -538,7 +538,7 @@ $bg_map = array(
             </div>
 
             <!-- Formulaire -->
-            <div class="bg-surface-mid p-10">
+            <div class="bg-surface-mid p-6 md:p-8 lg:p-10">
                 <h3 class="font-bold text-lg uppercase tracking-tight mb-6"><?php esc_html_e( 'S\'abonner à la lettre', 'rcg' ); ?></h3>
                 <form class="space-y-4" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
                     <?php wp_nonce_field( 'rcg_newsletter', 'rcg_newsletter_nonce' ); ?>

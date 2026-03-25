@@ -73,7 +73,7 @@ if ( ! $is_static && function_exists( 'have_rows' ) && have_rows( 'expertise_tag
 
     <?php if ( 'dark' === $bg ) : ?>
     <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-10 left-0 font-black text-[80px] md:text-[200px] lg:text-[400px] leading-none text-white/10 tracking-tighter select-none">!</div>
+        <div class="absolute top-10 left-0 font-black text-[40px] md:text-[200px] lg:text-[400px] leading-none text-white/10 tracking-tighter select-none">!</div>
     </div>
     <?php endif; ?>
 
