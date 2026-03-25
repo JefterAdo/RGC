@@ -40,7 +40,7 @@ $expertises_query = new WP_Query( array(
                         }
                     }
                     ?>
-                    <a href="<?php echo esc_url( $link ); ?>" class="group bg-white p-10 flex flex-col space-y-6 transition-all border-b-0 hover:border-b-[3px] border-primary">
+                    <a href="<?php echo esc_url( $link ); ?>" class="group bg-white p-6 md:p-8 lg:p-10 flex flex-col space-y-6 transition-all border-b-[3px] border-transparent hover:border-primary">
                         <span class="text-primary font-bold text-lg"><?php echo esc_html( $number ); ?></span>
                         <h3 class="text-2xl font-bold uppercase tracking-tight"><?php echo esc_html( get_the_title() ); ?></h3>
                         <p class="text-gray-500 text-sm leading-relaxed"><?php echo esc_html( get_the_excerpt() ); ?></p>
@@ -60,7 +60,7 @@ $expertises_query = new WP_Query( array(
                 );
                 foreach ( $static_expertises as $exp ) :
                     ?>
-                    <a href="#" class="group bg-white p-10 flex flex-col space-y-6 transition-all border-b-0 hover:border-b-[3px] border-primary">
+                    <a href="#" class="group bg-white p-6 md:p-8 lg:p-10 flex flex-col space-y-6 transition-all border-b-[3px] border-transparent hover:border-primary">
                         <span class="text-primary font-bold text-lg"><?php echo esc_html( $exp['num'] ); ?></span>
                         <h3 class="text-2xl font-bold uppercase tracking-tight"><?php echo esc_html( $exp['title'] ); ?></h3>
                         <p class="text-gray-500 text-sm leading-relaxed"><?php echo esc_html( $exp['desc'] ); ?></p>

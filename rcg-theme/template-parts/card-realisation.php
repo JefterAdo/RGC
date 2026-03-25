@@ -14,7 +14,7 @@ $cat_name   = $categories && ! is_wp_error( $categories ) ? $categories[0]->name
 ?>
 
 <a href="<?php the_permalink(); ?>" class="bg-surface-dark group block overflow-hidden">
-    <div class="h-48 md:h-64 overflow-hidden">
+    <div class="h-48 md:h-64 lg:h-72 overflow-hidden">
         <?php if ( has_post_thumbnail() ) : ?>
             <?php the_post_thumbnail( 'card-medium', array(
                 'class'   => 'w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500',

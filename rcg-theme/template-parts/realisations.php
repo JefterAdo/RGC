@@ -32,7 +32,7 @@ $archive_link = $reals_page ? get_permalink( $reals_page ) : home_url( '/realisa
             </a>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <?php
             if ( $realisations_query->have_posts() ) :
                 while ( $realisations_query->have_posts() ) :
@@ -65,7 +65,7 @@ $archive_link = $reals_page ? get_permalink( $reals_page ) : home_url( '/realisa
                 foreach ( $static_reals as $real ) :
                     ?>
                     <div class="bg-surface-dark group overflow-hidden">
-                        <div class="h-48 md:h-64 overflow-hidden">
+                        <div class="h-48 md:h-64 lg:h-72 overflow-hidden">
                             <img
                                 src="<?php echo esc_url( $real['img'] ); ?>"
                                 alt="<?php echo esc_attr( $real['alt'] ); ?>"

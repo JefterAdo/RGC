@@ -22,7 +22,7 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
 ?>
 
 <section class="relative min-h-screen lg:min-h-[95vh] bg-background-dark flex flex-col justify-center overflow-hidden">
-    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pt-8 pb-32 lg:py-20">
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pt-8 pb-32 lg:pt-20 lg:pb-24">
 
         <!-- Contenu texte -->
         <div class="z-10 flex flex-col items-start space-y-6 lg:space-y-8 order-2 lg:order-1">
@@ -53,7 +53,7 @@ $cta2_url    = rcg_get_field( 'hero_cta2_url', false, $cta2_default );
         </div>
 
         <!-- Image Hero -->
-        <div class="relative h-[250px] md:h-[400px] lg:h-[700px] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 order-1 lg:order-2">
+        <div class="relative h-[250px] md:h-[400px] lg:h-[600px] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 order-1 lg:order-2">
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
             <?php if ( $image ) : ?>
                 <img

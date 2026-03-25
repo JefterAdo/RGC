@@ -163,7 +163,7 @@ if ( ! $reals_url ) {
 <!-- ============================================
      HEADER HERO
      ============================================ -->
-<header class="relative bg-background-dark text-white overflow-hidden" style="min-height:75vh">
+<header class="relative bg-background-dark text-white overflow-hidden min-h-[60vh] lg:min-h-[75vh]">
     <div class="absolute inset-0 z-0">
         <?php
         $header_img = get_field( 'expertise_header_image' );
@@ -179,7 +179,7 @@ if ( ! $reals_url ) {
 
     <div class="hidden lg:block absolute top-0 right-0 border-t-[300px] border-r-[300px] border-t-primary/20 border-r-transparent z-0"></div>
 
-    <div class="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col justify-end" style="min-height:75vh;padding-bottom:80px;padding-top:80px">
+    <div class="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col justify-end min-h-[60vh] lg:min-h-[75vh] pt-20 pb-16 lg:pb-20">
         <div class="max-w-3xl">
             <div class="flex items-center gap-3 mb-6">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-primary/60 text-[9px] uppercase tracking-widest font-semibold hover:text-primary transition-colors">Accueil</a>

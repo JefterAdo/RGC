@@ -133,7 +133,7 @@ if ( ! $is_static && function_exists( 'have_rows' ) && have_rows( 'expertise_tag
         // --- IMAGE A GAUCHE ---
         if ( $show_image_first && $image_url ) :
         ?>
-        <div class="exp-img-wrap relative h-[280px] lg:h-auto overflow-hidden group">
+        <div class="exp-img-wrap relative h-[250px] md:h-[350px] lg:h-auto overflow-hidden group">
             <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
             <?php if ( 'gray' === $bg ) : ?>
                 <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#f4f4f4]/60"></div>
@@ -275,7 +275,7 @@ if ( ! $is_static && function_exists( 'have_rows' ) && have_rows( 'expertise_tag
         // --- IMAGE A DROITE ---
         if ( ! $show_image_first && $image_url ) :
         ?>
-        <div class="exp-img-wrap relative h-[280px] lg:h-auto overflow-hidden group">
+        <div class="exp-img-wrap relative h-[250px] md:h-[350px] lg:h-auto overflow-hidden group">
             <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="w-full h-full object-cover" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/30 to-transparent"></div>
 

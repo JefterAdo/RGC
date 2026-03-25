@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wp_body_open(); ?>
 
 <!-- Navigation sticky -->
-<nav class="sticky top-0 z-50 h-[72px] bg-white border-b border-gray-100 flex items-center px-6 lg:px-12 justify-between" role="navigation" aria-label="<?php esc_attr_e( 'Menu principal', 'rcg' ); ?>">
+<nav class="sticky top-0 z-50 min-h-[72px] bg-white border-b border-gray-100 flex items-center px-6 lg:px-12 justify-between" role="navigation" aria-label="<?php esc_attr_e( 'Menu principal', 'rcg' ); ?>">
 
     <!-- Logo -->
     <div class="flex items-center gap-3">
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
 
     <!-- Menu desktop -->
-    <div class="hidden lg:flex items-center gap-8">
+    <div class="hidden lg:flex items-center gap-5 xl:gap-8">
         <?php
         if ( has_nav_menu( 'menu-principal' ) ) {
             wp_nav_menu( array(
