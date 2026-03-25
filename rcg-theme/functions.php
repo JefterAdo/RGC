@@ -194,6 +194,36 @@ function rcg_security_headers() {
 add_action( 'send_headers', 'rcg_security_headers' );
 
 /**
+ * Securite : Bloquer l'enumeration des utilisateurs via l'API REST
+ */
+function rcg_restrict_rest_users( $result, $server, $request ) {
+    $route = $request->get_route();
+    if ( preg_match( '/\/wp\/v2\/users/', $route ) && ! current_user_can( 'list_users' ) ) {
+        return new WP_Error(
+            'rest_forbidden',
+            __( 'Acces refuse.', 'rcg' ),
+            array( 'status' => 403 )
+        );
+    }
+    return $result;
+}
+add_filter( 'rest_pre_dispatch', 'rcg_restrict_rest_users', 10, 3 );
+
+/**
+ * Securite : Desactiver completement XML-RPC
+ */
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
+/**
+ * Securite : Supprimer le lien XML-RPC du header HTML
+ */
+function rcg_remove_xmlrpc_headers() {
+    remove_action( 'wp_head', 'rsd_link' );
+    remove_action( 'template_redirect', 'rest_output_link_header', 11 );
+}
+add_action( 'after_setup_theme', 'rcg_remove_xmlrpc_headers' );
+
+/**
  * Theme Setup
  */
 function rcg_theme_setup() {
